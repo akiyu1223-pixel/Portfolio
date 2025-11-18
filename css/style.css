@@ -159,6 +159,14 @@ footer{
 .about-go img{
     margin-top: -200px;
     width: 800px;
+    position: relative;
+}
+.about-go h3{
+    color: #fff;
+    text-align: center;
+    line-height: 15vh;
+    margin-top: -240px;
+    position: absolute;
 }
 .uneune{
     width: 100%;
@@ -366,7 +374,7 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: -250px;
+    margin-top: -180px;
     margin-left: -60px;
     margin-bottom: 200px;
 }
@@ -484,6 +492,12 @@ footer{
 .works-title h2{
     margin-top: -185px;
     font-size: 30px;
+}
+.works-haikei{
+    height: 1520px;
+    background-image: url(../img/works-backleft.png),url(../img/works-backright.png);
+    background-repeat: repeat-y;
+    background-position: 3% 0 , 97% 0;
 }
 .works-img{
     display: flex;
