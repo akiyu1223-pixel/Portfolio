@@ -149,7 +149,7 @@ footer{
 }
 .about-go{
     width: 100%;
-    height: 1000px;
+    height: 700px;
     background-color: #faeaf0;
     display: flex;
     justify-content: center;
@@ -158,6 +158,7 @@ footer{
 }
 .about-go img{
     margin-top: -200px;
+    width: 800px;
 }
 .uneune{
     width: 100%;
@@ -181,14 +182,15 @@ footer{
     background-position: 0 0 , 100% 0;
     margin-top: -58px;
 }
-.works h2{
+.top-works h2{
     font-size: 24px;
 }
-.works-title{
+.top-works-title{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 220px;
+    color: #665447;
 }
 .sakuhin-box{
     height: 1520px;
@@ -439,6 +441,7 @@ footer{
     margin-bottom: 150px;
 }
 .skills-img{
+    width: 600px;
     margin-bottom: 150px;
 }
 .skills-txt{
@@ -461,6 +464,12 @@ footer{
 .works{
     width: 100%;
 }
+.works h2{
+    font-size: 24px;
+}
+.works img{
+    margin-bottom: 10px;
+}
 .works-title{
     width: 100%;
     height: fit-content;
@@ -468,8 +477,13 @@ footer{
     justify-content: center;
     align-items: center;
     color: #ecadc5;
-    margin-top: -100px;
+    /* margin-top: -100px; */
     margin-bottom: 200px;
+    padding-top: 220px;
+}
+.works-title h2{
+    margin-top: -185px;
+    font-size: 30px;
 }
 .works-img{
     display: flex;
@@ -496,6 +510,7 @@ footer{
 }
 .chair-title{
     font-size: 21px;
+    margin-bottom: 10px;
 }
 .chair-3koutei{
     display: flex;
