@@ -11,7 +11,7 @@ body{
     color: #665447;
     a:link{text-decoration: none; color: #665447;}
     a:visited{text-decoration: none; color: #665447;}
-    a:hover{text-decoration: none; color: #ed8fb3;}
+    a:hover{text-decoration: none; color: #665447;}
     a:active{text-decoration: none; color: #665447;}
 }
 h2{
@@ -533,6 +533,9 @@ footer{
     font-size: 14px;
 }
 
+.view-more2:hover{
+    color: #ed8fb3;
+}
 .view-more2{
     /* margin-left: 330px; */
     font-size: 16px;
@@ -574,6 +577,34 @@ footer{
     justify-content: center;
     align-items: center;
     font-size: 12px;
+}
+
+.btn-box2{
+    width: 100%;
+    margin-left: 330px;
+    margin-top: -80px;
+    margin-bottom: 100px;
+}
+.all-btn2{
+    width: 180px;
+    height: 55px;
+    border: 2px solid #665447;
+    background-color: #fff;
+    border-radius: 80px;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all-btn2:hover{
+    border: 2px solid #ecadc5;
+    background-color: #ecadc5;
+    color: #fff;
+    /* width: 185px;
+    height: 75px; */
+    transition: all .2s;
+    transform: scale(1.1,1.1);
 }
 
 
@@ -619,7 +650,7 @@ footer{
     margin: 0 auto;
     margin-bottom: 50px;
     line-height: 50px;
-    margin-left: 400px;
+    margin-left: 330px;
 }
 .web-txt2 h3{
     width: 100%;
@@ -664,16 +695,36 @@ footer{
 -------------------------- */
 
 .dot-before1::before {
-  content: "★";   /* 文字のあとに黒丸 */
+  content: "★";   /* 文字のあとに星 */
   color: #f9f7ed;      /* 色変更OK */
 }
 .dot-before2::before {
-  content: "★";   /* 文字のあとに黒丸 */
+  content: "★";   /* 文字のあとに星 */
   color: #d3c7b2;      /* 色変更OK */
 }
 .dot-before3::before {
-  content: "★";   /* 文字のあとに黒丸 */
+  content: "★";   /* 文字のあとに星 */
   color: #f2eedd;      /* 色変更OK */
+}
+.dot-before4::before {
+  content: "☆";   /* 文字のあとに星 */
+  color: #665447;      /* 色変更OK */
+}
+.dot-before5::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #c2e8a1;      /* 色変更OK */
+}
+.dot-before6::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #553d13;      /* 色変更OK */
+}
+.dot-before7::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #cdcdcd;      /* 色変更OK */
+}
+.dot-before8::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #5d5e5e;      /* 色変更OK */
 }
 
 
