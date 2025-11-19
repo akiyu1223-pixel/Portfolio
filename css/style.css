@@ -579,6 +579,104 @@ footer{
 
 
 
+/* ----------------
+
+　制作した作品詳細
+
+----------------- */
+
+
+.web-back h2{
+    font-size: 30px;
+}
+.web-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #ecadc5;
+    margin-top: -250px;
+    margin-bottom: 70px;
+}
+.web-box{
+    width: 100%;
+}
+.web-txt{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    line-height: 50px;
+}
+.web-txt2{
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    line-height: 50px;
+    margin-left: 400px;
+}
+.web-txt2 h3{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin-left: 230px; */
+}
+.yohaku{
+    height: 150px;
+}
+
+
+/* ---------------------
+
+　制作詳細 小見出し前 ●
+
+--------------------- */
+
+.cute-title {
+  position: relative;
+  padding-left: 18px;
+}
+
+.cute-title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ecadc5;
+  border-radius: 50%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* --------------------------
+
+　デザインコンセプト/カラー★
+
+-------------------------- */
+
+.dot-before1::before {
+  content: "★";   /* 文字のあとに黒丸 */
+  color: #f9f7ed;      /* 色変更OK */
+}
+.dot-before2::before {
+  content: "★";   /* 文字のあとに黒丸 */
+  color: #d3c7b2;      /* 色変更OK */
+}
+.dot-before3::before {
+  content: "★";   /* 文字のあとに黒丸 */
+  color: #f2eedd;      /* 色変更OK */
+}
+
+
 
 /* ------------------
 
@@ -592,11 +690,11 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    
+    margin-bottom: 100px;
 }
 .sample-box {
-  max-width: 500px;                /* 横幅を200pxに指定 */
-  max-height: 400px;               /* 横幅を200pxに指定 */
+  max-width: 900px;                /* 横幅を200pxに指定 */
+  max-height: 600px;               /* 横幅を200pxに指定 */
   border: 1px solid #e4e4e4;      /* わかりやすくボーダーを引く */
   overflow-y: auto;          /* 縦方向にスクロール可能にする */
 }
