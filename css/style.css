@@ -11,7 +11,7 @@ body{
     color: #665447;
     a:link{text-decoration: none; color: #665447;}
     a:visited{text-decoration: none; color: #665447;}
-    a:hover{text-decoration: none; color: #665447;}
+    a:hover{text-decoration: none; color: #ed8fb3;}
     a:active{text-decoration: none; color: #665447;}
 }
 h2{
@@ -579,11 +579,22 @@ footer{
     font-size: 12px;
 }
 
+
+/* ----------------
+
+　制作した作品詳細
+
+----------------- */
+
 .btn-box2{
     width: 100%;
     margin-left: 330px;
     margin-top: -80px;
     margin-bottom: 100px;
+    a:link{text-decoration: none; color: #665447;}
+    a:visited{text-decoration: none; color: #665447;}
+    a:hover{text-decoration: none; color: #665447;}
+    a:active{text-decoration: none; color: #665447;}
 }
 .all-btn2{
     width: 180px;
@@ -606,15 +617,6 @@ footer{
     transition: all .2s;
     transform: scale(1.1,1.1);
 }
-
-
-
-
-/* ----------------
-
-　制作した作品詳細
-
------------------ */
 
 
 .web-back h2{
@@ -726,7 +728,19 @@ footer{
   content: "★";   /* 文字のあとに星 */
   color: #5d5e5e;      /* 色変更OK */
 }
-
+.dot-before9::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #e9e6d7;      /* 色変更OK */
+  margin-left: -10px;
+}
+.dot-before10::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #BD8B75;      /* 色変更OK */
+}
+.dot-before11::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #7F5B4C;      /* 色変更OK */
+}
 
 
 /* ------------------
