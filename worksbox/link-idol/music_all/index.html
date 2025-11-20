@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ja" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALL MUSIC | あおいろぱれっと</title>
+
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script src="../js/jquery-1.11.2.min.js"></script>
+
+  <!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- 共通：ハンバーガー開閉 -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    (function(){
+      const btn   = document.getElementById('hamburger');
+      const panel = document.getElementById('mobileMenu');
+      if (!btn || !panel) return;
+
+      const openPanel = () => {
+        btn.setAttribute('aria-expanded','true');
+        panel.setAttribute('aria-hidden','false');
+        document.body.classList.add('is-menu-open');
+      };
+      const closePanel = () => {
+        btn.setAttribute('aria-expanded','false');
+        panel.setAttribute('aria-hidden','true');
+        document.body.classList.remove('is-menu-open');
+      };
+
+      btn.addEventListener('click', () => {
+        (btn.getAttribute('aria-expanded')==='true') ? closePanel() : openPanel();
+      });
+      panel.addEventListener('click', (e) => { if (e.target.closest('a')) closePanel(); });
+      document.addEventListener('click', (e) => {
+        const isOpen = panel.getAttribute('aria-hidden') === 'false';
+        if (!isOpen) return;
+        if (!e.target.closest('#mobileMenu') && !e.target.closest('#hamburger')) closePanel();
+      });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(); });
+      const mql = window.matchMedia('(max-width: 800px)');
+      mql.addEventListener('change', () => { if (!mql.matches) closePanel(); });
+    })();
+  });
+  </script>
+</head>
+
+<body class="ap-music" style="--mid-bg:#CDEBF1; --music-title-shift:32px;">
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="container header-inner">
+     <a href="../index.html" class="logo">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+      </a>
+
+
+      <nav class="site-nav" aria-label="グローバルナビ">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../news_all/index.html">NEWS</a></li>
+          <li><a class="nav-link" href="../schedule_all/index.html">SCHEDULE</a></li>
+          <li><a class="nav-link" href="../index.html#profile">PROFILE</a></li>
+          <li><a class="nav-link" href="../music_all/index.html"aria-current="page">MUSIC</a></li>
+          <li><a class="nav-link" href="../ticket_all/index.html">TICKET</a></li>
+        </ul>
+      </nav>
+
+      <ul class="sns-list" aria-label="SNSリンク">
+        <li><a href="https://x.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="メニューを開閉">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルメニュー -->
+  <div class="mobile-panel" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="モバイルメニュー">
+      <ul class="mobile-list">
+        <li><a class="mobile-link" href="../news_all/index.html">NEWS</a></li>
+        <li><a class="mobile-link" href="../schedule_all/index.html">SCHEDULE</a></li>
+        <li><a class="mobile-link" href="../index.html#profile">PROFILE</a></li>
+        <li><a class="mobile-link" href="../all_music/index.html" aria-current="page">MUSIC</a></li>
+        <li><a class="mobile-link" href="../ticket_list/index.html">TICKET</a></li>
+      </ul>
+      <ul class="mobile-sns">
+        <li><a href="https://x.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ヒーロー
+  <section class="music-hero u-bleed">
+    <div class="u-bleed__inner">
+      <h1 class="page-title">ALL MUSIC</h1>
+    </div>
+  </section> -->
+  
+  <!-- 背景が左右隙間ゼロで全幅 -->
+  <section class="music-hero u-bleed">
+    <div class="u-bleed__inner">
+      <h1>ALL MUSIC</h1>
+      <!-- <div class="all_music_button">
+        <a href="../news_all/index.html"><p>2025</p></a>
+        <a href="../news_all/index.html"><p>2024</p></a>
+        <a href="../news_all/index.html"><p>2023</p></a>
+        </div> -->
+
+    </div>
+  </section>
+  <!-- 真ん中：水色の帯＋カード -->
+  <main id="main" class="music-mid u-bleed" style="background:var(--mid-bg);">
+    <div class="u-bleed__inner">
+      <ul class="music-grid" aria-label="リリース一覧">
+        <!-- 1) NEW -->
+        <li class="music-card">
+          <a class="music-link" href="../music_detail/index.html" aria-label="わたしに恋して 詳細へ（仮）">
+            <img class="mc-art" src="../img/all_music_zyake1_w408xh153.png" alt="わたしに恋して ジャケット">
+            <div class="mc-body">
+              <div class="mc-left"><span class="badge -new">NEW</span></div>
+              <div class="mc-right">
+                <div class="mc-meta"><span class="date">2025.11.01</span><span class="rel">Release</span></div>
+                <h3 class="mc-title">「わたしに恋して」</h3>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <!-- 2) 初恋パレット -->
+        <li class="music-card">
+          <a class="music-link" href="#" aria-label="初恋パレット 詳細へ（仮）">
+            <img class="mc-art" src="../img/all_music_zyake2_w408xh153.png" alt="初恋パレット ジャケット">
+            <div class="mc-body">
+              <div class="mc-left"><span class="badge -placeholder" aria-hidden="true"></span></div>
+              <div class="mc-right">
+                <div class="mc-meta"><span class="date">2024.11.01</span><span class="rel">Release</span></div>
+                <h3 class="mc-title">「初恋パレット」</h3>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <!-- 3) あおぱれそんぐ -->
+        <li class="music-card">
+          <a class="music-link" href="#" aria-label="あおぱれそんぐ 詳細へ（仮）">
+            <img class="mc-art" src="../img/all_music_zyake3_w408xh153.png" alt="あおぱれそんぐ ジャケット">
+            <div class="mc-body">
+              <div class="mc-left"><span class="badge -placeholder" aria-hidden="true"></span></div>
+              <div class="mc-right">
+                <div class="mc-meta"><span class="date">2023.04.01</span><span class="rel">Release</span></div>
+                <h3 class="mc-title">「あおぱれそんぐ」</h3>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- 下：背景画像（Back中央＋パンくず左） -->
+  <section class="music-sub u-bleed">
+    <div class="u-bleed__inner">
+      <a href="../index.html" class="back-btn btn-outline-grad"
+         onclick="if (history.length > 1) { history.back(); return false; }">
+        <span class="ico">◁</span><span class="btn-label">Back</span>
+      </a>
+
+      <nav class="breadcrumb" aria-label="パンくずリスト" style="align-self:flex-start">
+        <a href="../index.html" class="breadcrumb__link">TOP</a>
+        <img src="../img/pankuzu_blueheart_w13_h10.png" alt="" aria-hidden="true">
+        <a href="#" class="breadcrumb__link" aria-current="page">ALL MUSIC</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="foot-logo" href="../index.html" aria-label="トップへ">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク">
+      </a>
+      <ul class="footer-list" aria-label="フッターナビ">
+        <li><a href="#">出演依頼はこちら</a></li>
+        <li><a href="../privacypolicy/index.html">プライバシーポリシー</a></li>
+      </ul>
+      <p class="copyright">&copy; 2025 株式会社ラブクリエイト</p>
+    </div>
+  </footer>
+</body>
+</html>

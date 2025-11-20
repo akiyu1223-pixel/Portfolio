@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>イベント詳細｜あおいろぱれっと</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--jQuery本体-->
+<script src="js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<!-- ハンバーガーメニュー -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById('hamburger');
+    const panel = document.getElementById('mobileMenu');
+    if (!btn || !panel) return;
+
+    const closePanel = () => {
+      btn.setAttribute('aria-expanded', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+    };
+
+    const openPanel = () => {
+      btn.setAttribute('aria-expanded', 'true');
+      panel.setAttribute('aria-hidden', 'false');
+    };
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      expanded ? closePanel() : openPanel();
+    });
+
+    panel.addEventListener('click', (e) => {
+      if (e.target.closest('a')) closePanel();
+    });
+
+    document.addEventListener('click', (e) => {
+      const isOpen = panel.getAttribute('aria-hidden') === 'false';
+      if (!isOpen) return;
+      const insidePanel = e.target.closest('#mobileMenu');
+      const isButton = e.target.closest('#hamburger');
+      if (!insidePanel && !isButton) closePanel();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePanel();
+    });
+
+    const mql = window.matchMedia('(max-width: 800px)');
+    mql.addEventListener('change', () => {
+      if (!mql.matches) closePanel();
+    });
+  });
+  </script>
+</head>
+
+<body class="page-home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+      </a>
+
+      <nav class="site-nav" aria-label="グローバルナビ">
+        <ul class="nav-list">
+          <li><a href="../news_all/index.html" class="nav-link">NEWS</a></li>
+          <li><a href="../schedule_all/index.html" class="nav-link">SCHEDULE</a></li>
+          <li><a href="../index.html#profile" class="nav-link">PROFILE</a></li>
+          <li><a href="../music_all/index.html" class="nav-link">MUSIC</a></li>
+          <li><a href="../ticket_all/index.html" class="nav-link">TICKET</a></li>
+        </ul>
+      </nav>
+
+      <!-- SNSリンク（PC表示） -->
+      <ul class="sns-list">
+        <li><a href="https://x.com" target="_blank"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- スマホ用メニュー（SNS付き） -->
+  <div class="mobile-panel" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="モバイルメニュー">
+      <ul class="mobile-list">
+        <li><a href="../news_all/index.html" class="mobile-link">NEWS</a></li>
+        <li><a href="../schedule_all/index.html" class="mobile-link">SCHEDULE</a></li>
+        <li><a href="../profile/index.html" class="mobile-link">PROFILE</a></li>
+        <li><a href="../all_music/index.html" class="mobile-link">MUSIC</a></li>
+        <li><a href="../ticket_list/index.html" class="mobile-link">TICKET</a></li>
+      </ul>
+      <ul class="mobile-sns">
+        <li><a href="https://x.com" target="_blank"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+    </nav>
+  </div>
+
+<!-- =====ここから私のターン===== -->
+  <main class="main-con">
+    <div class="news-background-top"></div> 
+    <div class="container">
+        <h1 class="page-title">NEWS</h1>
+        
+        <section class="news-detail-area">
+            <div class="event-header-wrapper">
+                <h2 class="event-title">1st Single「わたしに恋して」<br>発売記念リリースイベント開催決定！</h2>
+                <a href="../news_all/index.html" class="all-news-label">ALL NEWS</a> 
+            </div>
+
+            <div class="detail-section-wrapper">
+                
+                <div class="detail-section">
+                    <div class="section-heading">
+                        <h3>日程</h3>
+                    </div>
+                    <div class="section-content">
+                        <p>2026年02月14日（土）</p>
+                        <ul class="time-list">
+                            <li>12:00〜 グッズ販売/優先入場券販売</li>
+                            <li>14:10〜 優先入場</li>
+                            <li>14:20〜 一般入場</li>
+                            <li>14:30〜 開演</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="section-heading">
+                        <h3>会場</h3>
+                    </div>
+                    <div class="section-content">
+                        <p>夢の宮ガーデン ながれ星のふんすい広場</p>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="section-heading">
+                        <h3>イベント参加方法</h3>
+                    </div>
+                    <div class="section-content">
+                        <p>イベント当日、販売特設ブースにて対象商品をご購入の方へ<br>
+                        対象商品を1点ご購入につき、「観覧エリア優先入場券」と「特典券」を1枚お渡しいたします。<br>
+                            <br>
+                        <p><span class=annotation-text>※お支払いは現金/各種クレジットカード/電子マネー/QRコード決済がご利用いただけます。<br>
+                        ※ご購入いただきました商品は、いかなる理由でも返品は一切お受けできません。</span><br></p>
+                            <br>
+                        ※「観覧エリア優先入場券」は、無くなり次第配布終了とさせていただきます。<br>
+                        「観覧エリア優先入場券」記載の番号はランダムでの配布とさせていただきます。</p>
+                    </div>
+                </div>
+                
+                <div class="detail-section">
+                    <div class="section-heading">
+                        <h3>注意事項</h3>
+                    </div>
+                    <div class="section-content">
+                        <p class="caution-text">
+                            ファンレター/プレゼントのお受け取りはいたしかねます。<br>
+                            イベント当日､カメラが入る可能性があります。お客様が映りこむ可能性がありますので、予めご了承ください。<br>
+                            当日の天候・交通事情により、時間・場所・内容が変更になる場合やイベントが中止になる場合がございます。予めご了承ください。<br>
+                            ※天候・災害や諸事情により等の理由により、当日のイベントがやむをえず中止になる場合がございます。<br>
+                            ※会場までの交通費、宿泊費はお客様のご負担となります。万が一、イベントが中止になった場合でも変わりはございません。<br>
+                            ※カメラ、ビデオカメラ、カメラ付携帯電話等でのアーティストの撮影、録音録画のすべての行為はスタッフの指示がない限り一切禁止とさせていただきます。<br> 
+                            ※会場内・外で係員の指示及び注意事項に従わずに生じた事故や盗難等、主催者・会場・出演者は一切責任を負いません。<br>
+                            ※会場内にロッカーやクロークはございません。手荷物の管理は自己責任にてお願いいたします。<br>
+                            ※貴重品は各自で管理してください。<br>
+                            ※ゴミは各自お持ち帰りいただきますよう、ご協力お願いいたします。<br>
+                            ※体調不良などの理由により、やむをえず出演メンバーが変更になる場合がございます。予めご了承ください。<br>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Backボタンエリア -->
+            <div class="back-link-area">
+                <a href="../index.html" class="back-button"><span class="button-text">◁ Back</span></a>
+            </div>
+
+        </section>
+
+        <p class="pankuzu">
+          <a href="../index.html">TOP</a>
+          <span class="separator"></span>  <a href="../news_all/index.html">ALL NEWS</a>
+          <span class="separator"></span>  イベント詳細
+        </p>
+
+    </div>
+    
+    <div class="news-background-bottom"></div> 
+</main>
+<!-- =====ここまで私のターン===== -->
+
+
+<!-- フッター -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="../index.html" class="foot-logo">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+      </a>
+      <ul class="footer-list">
+        <li><a href="#">出演依頼はこちら</a></li>
+        <li><a href="../privacypolicy/index.html">プライバシーポリシー</a></li>
+      </ul>
+      <p class="copyright">&copy;2025 株式会社ラブクリエイト</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

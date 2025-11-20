@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SCHEDULE | あおいろぱれっと</title>
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+
+  <!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- このページ専用CSS（追記OK） -->
+  <style>
+    /* ▼ このページだけ背景を画像リピートにする設定 ▼ */
+    .ap-schedule .bg-midtile {
+      background-color: #FCEDF6; /* ←今のピンク色（消したくなければ残す） */
+      background-image: var(--tile-mid);
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      background-position: top center;
+    }
+
+    .ap-schedule .bg-subtile {
+      background-color: #E6F5FB;
+      background-image: var(--tile-sub);
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      background-position: top center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ▼ 背景画像を指定（ここで画像をリンクする） -->
+  <div class="ap-schedule"
+       style="
+         --tile-mid: url('../img/kasou_schedule_all_haikei_w200xh200.png');
+         --tile-sub: url('../img/kasou_schedule_all_haikei_w200xh200.png');
+       ">
+
+    <!-- ========== ヘッダー（共通） ========== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo" aria-label="トップへ">
+          <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク">
+        </a>
+
+        <nav class="site-nav" aria-label="グローバルナビ">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="../news_all/index.html">NEWS</a></li>
+            <li><a class="nav-link" href="../schedule_all/index.html">SCHEDULE</a></li>
+            <li><a class="nav-link" href="../index.html#profile">PROFILE</a></li>
+            <li><a class="nav-link" href="../music_all/index.html">MUSIC</a></li>
+            <li><a class="nav-link" href="../ticket_all/index.html" aria-current="page">TICKET</a></li>
+          </ul>
+        </nav>
+
+        <ul class="sns-list" aria-label="SNSリンク">
+          <li><a href="https://x.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_X.png" alt="X"></a></li>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+          <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="メニューを開閉">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- モバイルメニュー -->
+    <div class="mobile-panel" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="モバイルメニュー">
+        <ul class="mobile-list">
+          <li><a class="mobile-link" href="../news_all/index.html">NEWS</a></li>
+          <li><a class="mobile-link" href="../schedule_all/index.html">SCHEDULE</a></li>
+          <li><a class="mobile-link" href="../index.html#profile">PROFILE</a></li>
+          <li><a class="mobile-link" href="../music_all/index.html">MUSIC</a></li>
+          <li><a class="mobile-link" href="../ticket_all/index.html">TICKET</a></li>
+        </ul>
+        <ul class="mobile-sns">
+          <li><a href="https://x.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_X.png" alt="X"></a></li>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+          <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <!-- ========== 上部：SCHEDULEヒーロー（背景リピート） ========== -->
+    <section class="schedule-hero bg-midtile u-bleed">
+      <div class="u-bleed__inner">
+        <h1 class="page-title">SCHEDULE</h1>
+
+        <!-- 種別ボタン -->
+        <div class="filter-pills -right">
+          <a href="#" class="pill">All</a>
+          <a href="#" class="pill">Live</a>
+          <a href="#" class="pill">Event</a>
+          <a href="#" class="pill">Ticket</a>
+        </div>
+
+        <!-- 月ナビ -->
+        <nav class="month-nav">
+          <a href="#" class="mn-link -prev">
+            <img src="../img/schedule_blueheart_w13_h10_hidari_.png" alt="前の月">
+            <span class="mn-label">2025.11</span>
+          </a>
+          <span class="mn-current">2025.12</span>
+          <a href="#" class="mn-link -next">
+            <span class="mn-label">2026.01</span>
+            <img src="../img/schedule_blueheart_w13_h10_migi_.png" alt="次の月">
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== 中央：カード一覧（同じタイル背景） ========== -->
+    <main class="main-content bg-midtile">
+      <div class="list-wrap">
+        <article class="item">
+          <span class="date-badge">
+            <img src="../img/schedule_heart.png" class="date-ico" alt="日付背景">
+            <span class="date-text">12/25</span>
+          </span>
+          <div class="item-body"><a href="../schedule_detail/index.html">
+            <div class="tags">
+              <span class="tag -live">Live</span>
+              <span class="tag -ticket">Ticket</span>
+            </div>
+            <h3 class="item-title">　2025年12月25日（木）チケット販売中！</h3>
+            <p class="item-desc">「あおぱれ　Twinkle Spell☆聖夜のぱれっと」開催！</p>
+          </div>
+        </a>
+        </article>
+      </div>
+    </main>
+
+    <!-- ========== 下部：Back＋パンくず（背景リピート） ========== -->
+    <section class="sub-hero bg-subtile u-bleed">
+      <div class="u-bleed__inner">
+        <a href="../index.html" class="back-btn btn-outline-grad">
+          <span class="ico">◁</span><span class="btn-label">Back</span>
+        </a>
+        <nav class="breadcrumb">
+          <a href="../index.html">TOP</a>
+          <img src="../img/pankuzu_blueheart_w13_h10.png" alt="">
+          <a href="../schedule_all/index.html">ALL SCHEDULE</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== フッター ========== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="../index.html" class="foot-logo"><img src="../img/aopale_logo2.png" alt=""></a>
+        <ul class="footer-list">
+          <li><a href="#">出演依頼はこちら</a></li>
+          <li><a href="../privacypolicy/index.html">プライバシーポリシー</a></li>
+        </ul>
+        <p class="copyright">&copy; 2025 あおいろぱれっと</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ========== JS：ハンバーガー開閉 ========== -->
+
+
+  <script>
+    (function(){
+      const root = document.querySelector('.ap-schedule');
+      if(!root) return;
+      const btn = root.querySelector('#hamburger');
+      const panel = root.querySelector('#mobileMenu');
+      if(!btn || !panel) return;
+
+      const open = () => {btn.setAttribute('aria-expanded','true'); panel.setAttribute('aria-hidden','false'); root.classList.add('is-menu-open');};
+      const close = () => {btn.setAttribute('aria-expanded','false'); panel.setAttribute('aria-hidden','true'); root.classList.remove('is-menu-open');};
+
+      btn.addEventListener('click',()=>{(btn.getAttribute('aria-expanded')==='true')?close():open();});
+      panel.addEventListener('click',(e)=>{if(e.target.closest('a')) close();});
+      document.addEventListener('keydown',(e)=>{if(e.key==='Escape') close();});
+    })();
+  </script>
+</body>
+</html>

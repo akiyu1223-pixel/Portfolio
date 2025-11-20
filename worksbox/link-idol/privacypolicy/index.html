@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>あおいろぱれっと - プライバシーポリシー</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+
+
+//   ハンバーガーメニュー
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById('hamburger');
+    const panel = document.getElementById('mobileMenu');
+    if (!btn || !panel) return;
+
+    const closePanel = () => {
+      btn.setAttribute('aria-expanded', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+    };
+
+    const openPanel = () => {
+      btn.setAttribute('aria-expanded', 'true');
+      panel.setAttribute('aria-hidden', 'false');
+    };
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      expanded ? closePanel() : openPanel();
+    });
+
+    panel.addEventListener('click', (e) => {
+      if (e.target.closest('a')) closePanel();
+    });
+
+    document.addEventListener('click', (e) => {
+      const isOpen = panel.getAttribute('aria-hidden') === 'false';
+      if (!isOpen) return;
+      const insidePanel = e.target.closest('#mobileMenu');
+      const isButton = e.target.closest('#hamburger');
+      if (!insidePanel && !isButton) closePanel();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePanel();
+    });
+
+    const mql = window.matchMedia('(max-width: 800px)');
+    mql.addEventListener('change', () => {
+      if (!mql.matches) closePanel();
+    });
+  });
+
+</script>
+
+</head>
+
+<body class="page-home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+      </a>
+
+      <nav class="site-nav" aria-label="グローバルナビ">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link">NEWS</a></li>
+          <li><a href="#" class="nav-link">SCHEDULE</a></li>
+          <li><a href="../index.html#profile" class="nav-link">PROFILE</a></li>
+          <li><a href="#" class="nav-link">MUSIC</a></li>
+          <li><a href="#" class="nav-link">TICKET</a></li>
+        </ul>
+      </nav>
+
+      <!-- SNSリンク（PC表示） -->
+      <ul class="sns-list">
+        <li><a href="https://x.com" target="_blank"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- スマホ用メニュー（SNS付き） -->
+  <div class="mobile-panel" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="モバイルメニュー">
+      <ul class="mobile-list">
+        <li><a href="#" class="mobile-link">NEWS</a></li>
+        <li><a href="#" class="mobile-link">SCHEDULE</a></li>
+        <li><a href="../index.html#profile" class="mobile-link">PROFILE</a></li>
+        <li><a href="#" class="mobile-link">MUSIC</a></li>
+        <li><a href="#" class="mobile-link">TICKET</a></li>
+      </ul>
+      <ul class="mobile-sns">
+        <li><a href="https://x.com" target="_blank"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+    <main>
+  <!-- 下層ページはここから下を変える    -->  
+
+<div class="policy-oya">
+    <div class="policy-box1">
+        <div class="policy-01">
+            <h2 class="po-txt01">PRIVACY POLICY(個人情報保護方針)</h2>
+        </div>
+        <div class="policy-02">
+            <p class="po-txt02">株式会社ラブクリエイト (以下、弊社と総称します)は、弊社に個人情報を提供されるすべての方（以下、ご本人様と総称します）の個人情報（以下、個人情報といいます）を適切に保護することが個人情報取扱事業者としての重要な責務であると認識し、その取扱い方針を以下のとおり定め、個人情報の保護に努めます。</p>
+        </div>
+        
+        <div class="policy-03">
+            <h2 class="policy-maintxt">1. 個人情報の利用目的について</h2>
+        </div>
+        <div class="policy-05">
+            <p class="po-txt03">当社は、個人情報をご提供いただく際には利用目的や第三者への提供の有無等についてお知らせいたします。以下の利用目的の達成に必要な範囲を超えてお客さまの個人情報を利用することはありません。</p>
+        </div>
+        <div class="policy-06">
+            <!-- <p class="po-txt04"></p> -->
+            <ul class="po-txt05">
+                <li>お問い合わせへの回答</li>
+                <li>商品およびサービス等のご案内</li>
+                <li>電子メールの配信サービスの提供</li>
+                <li>よりよい商品・サービスの開発およびこれらに関わる調査・研究</li>
+                <li>GoogleやYahoo等の広告配信事業者を利用した行動ターゲティング広告の配信</li>
+            </ul>
+        </div>
+
+        <div class="policy-03">
+            <h2 class="policy-maintxt">2. 第三者への開示</h2>
+            </div>
+        <div class="policy-04">
+            <p class="po-txt03">当社は、ご提供いただいた個人情報を、次の場合を除き第三者に提供することはありません。</p>
+        </div>
+        <div class="policy-06">
+            <ul class="po-txt05">
+                <li>ご本人の同意がある場合</li>
+                <li>利用目的の範囲内で業務の一部または全部を委託する場合</li>
+                <li>法令に基づく要請に応じる場合あるいは法令により特に許されている場合</li>
+            </ul>
+        </div>
+
+        <div class="policy-03">
+            <h2 class="policy-maintxt">3. グループ会社による共同利用</h2>
+            </div>
+        <div class="policy-04">
+            <p class="po-txt03">当社は、次のいずれかに該当する場合を除き、お客さまからご提供いただいた個人情報を如何なる第三者にも開示、提供いたしません。</p>
+        </div>
+        <div class="policy-06">
+            <ul class="po-txt05">
+                <li>利用目的の達成に必要な範囲内において業務委託先に提供する場合</li>
+                <li>法令に基づく場合</li>
+            </ul>
+        </div>
+
+        <div class="policy-03">
+            <h2 class="policy-maintxt">4. 個人情報の委託について</h2>
+            </div>
+        <div class="policy-04">
+            <p class="po-txt03">当社は、次のいずれかに該当する場合を除き、お客さまからご提供いただいた個人情報を如何なる第三者にも開示、提供いたしません。</p>
+        </div>
+        <div class="policy-06">
+            <ul class="po-txt05">
+                <li>利用目的の達成に必要な範囲内において業務委託先に提供する場合</li>
+                <li>法令に基づく場合</li>
+            </ul>
+        </div>
+
+        <div class="policy-03">
+            <h2 class="policy-maintxt">5.匿名加工情報の作成・提供について</h2>
+            </div>
+        
+        <div class="policy-06">
+            <ul class="po-txt05">
+                <li>当社は匿名加工情報を作成する場合は、以下の対応を行います。</li>
+                    <p class="po-txt06">・特定の個人を識別することができない等の適切な加工を施す<br>・情報漏えいを防止するための安全管理措置を講じる<br>・匿名加工情報に含まれる情報の項目を公表する<br>・本人を識別するために、作成した匿名加工情報を他の情報と照合しない</p>
+                <li>当社は匿名加工情報を第三者に提供する場合は、当該情報に含まれる個人に関する情報の項目およびその提供方法について公表するとともに、当該第三者に対し、当該情報が匿名加工情報である旨を明示いたします。</li>
+            </ul>
+        </div>
+
+        <div class="policy-03">
+            <h2 class="policy-maintxt">6. 個人情報の開示等のご請求について</h2>
+            </div>
+        <div class="policy-04">
+            <p class="po-txt03">当社は開示対象個人情報（「1.個人情報の取得・利用について」の利用範囲）について以下の事項に対応いたします。</p>
+        </div>
+        <div class="policy-06">
+            <ul class="po-txt05">
+                <li>利用目的の通知の請求</li>
+                <li>開示の請求</li>
+                <li>内容の訂正の請求</li>
+                <li>追加または削除の請求</li>
+                <li>利用停止の請求</li>
+                <li>削除および第三者への利用停止の請求ご希望の場合は「個人情報に関するお問い合わせ先」にご連絡をお願いいたします。</li>
+            </ul>
+        </div>
+
+        <div class="policy-03">
+            <h2 class="policy-maintxt">7. Webサイトにおける個人情報の取り扱いについて</h2>
+            </div>
+        <!-- <div class="policy-04">
+            <p class="po-txt03"></p>
+        </div> -->
+        <div class="policy-06">
+            <ul class="po-txt05">
+                <li>Cookieの取得お客さまに最適なサービスをご提供するために、アクセスログやCookie(クッキー)の技術を使用して、アクセス履歴等に関する情報を収集しております。お使いのブラウザでCookieの使用が無効になっている場合は正しくページを表示できません。<br>当社サイトにアクセスされた方に、当社の行動ターゲティング広告が適切に配信される事を目的として、各社の広告サービスを利用しております。本広告サービスでは、お客さまがアクセスに利用された機器にCookieを記録しておりますが、当社の運営サイトで記録されたCookieは、本広告サービス提供の目的のみで使用するものであり、個人情報の収集を含めその他の目的では一切使用いたしません。</li>
+                <li>当社は匿名加工情報を第三者に提供する場合は、当該情報に含まれる個人に関する情報の項目およびその提供方法について公表するとともに、当該第三者に対し、当該情報が匿名加工情報である旨を明示いたします。</li>
+                <li>アクセスログの記録利用者が当社サイトにアクセスした情報をアクセスログという形で記録しています。アクセスログには個人を特定できる情報は含まれておりません。<br>アクセスログは利用状況に関する統計や分析処理、サイトの利便性向上のほか、万一問題が発生した際の原因追及等に使用するため採取しております。 上記以外の目的には使用いたしません。</li>
+            </ul>
+        </div>
+        <div class="policy-03">
+            <h2 class="policy-maintxt">8. 個人情報に関するお問い合わせ</h2>
+            </div>
+        <div class="policy-04">
+            <p class="po-txt03">個人情報の取り扱いに関するお問い合わせ先は下記とさせていただきます。<br><br>● 個人情報に関するお問い合わせ先</p>
+        </div>
+        <div class="policy-07">
+            <p class="po-txt07">株式会社ラブクリエイト 個人情報担当<br>住所：〒113-0033 東京都文京区本郷 3-45-6<br>TEL：0120-345-6789<br>営業時間：午前11時～午後7時(土日・祝日、年末年始を除く)</p>
+        </div>
+        <div class="policy-08">
+            <a href="#"><p class="po-txt07btn">お問い合わせフォームはこちら</p></a>
+        </div>
+        <div class="policy-09">
+            <p class="po-txt03">平成30年3月1日　改訂<br>令和7年9月14日　改訂</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- 下層ページはここから上を変える -->
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+        <a href="index.html" class="foot-logo">
+            <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+        </a>
+        <ul class="footer-list">
+            <li><a href="#">出演依頼はこちら</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+        <p class="copyright">&copy;2025 株式会社ラブクリエイト</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

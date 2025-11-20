@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ライブ詳細｜あおいろぱれっと</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--jQuery本体-->
+<script src="js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<!-- ハンバーガーメニュー -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById('hamburger');
+    const panel = document.getElementById('mobileMenu');
+    if (!btn || !panel) return;
+
+    const closePanel = () => {
+      btn.setAttribute('aria-expanded', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+    };
+
+    const openPanel = () => {
+      btn.setAttribute('aria-expanded', 'true');
+      panel.setAttribute('aria-hidden', 'false');
+    };
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      expanded ? closePanel() : openPanel();
+    });
+
+    panel.addEventListener('click', (e) => {
+      if (e.target.closest('a')) closePanel();
+    });
+
+    document.addEventListener('click', (e) => {
+      const isOpen = panel.getAttribute('aria-hidden') === 'false';
+      if (!isOpen) return;
+      const insidePanel = e.target.closest('#mobileMenu');
+      const isButton = e.target.closest('#hamburger');
+      if (!insidePanel && !isButton) closePanel();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePanel();
+    });
+
+    const mql = window.matchMedia('(max-width: 800px)');
+    mql.addEventListener('change', () => {
+      if (!mql.matches) closePanel();
+    });
+  });
+  </script>
+</head>
+
+<body class="page-home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+      </a>
+
+      <nav class="site-nav" aria-label="グローバルナビ">
+        <ul class="nav-list">
+          <li><a href="../news_all/index.html" class="nav-link">NEWS</a></li>
+          <li><a href="../schedule_all/index.html" class="nav-link">SCHEDULE</a></li>
+          <li><a href="../index.html#profile" class="nav-link">PROFILE</a></li>
+          <li><a href="../music_all/index.html" class="nav-link">MUSIC</a></li>
+          <li><a href="../ticket_all/index.html" class="nav-link">TICKET</a></li>
+        </ul>
+      </nav>
+
+      <!-- SNSリンク（PC表示） -->
+      <ul class="sns-list">
+        <li><a href="https://x.com" target="_blank"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- スマホ用メニュー（SNS付き） -->
+  <div class="mobile-panel" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="モバイルメニュー">
+      <ul class="mobile-list">
+        <li><a href="../news_all/index.html" class="mobile-link">NEWS</a></li>
+        <li><a href="../schedule_all/index.html" class="mobile-link">SCHEDULE</a></li>
+        <li><a href="../profile/index.html" class="mobile-link">PROFILE</a></li>
+        <li><a href="../all_music/index.html" class="mobile-link">MUSIC</a></li>
+        <li><a href="../ticket_list/index.html" class="mobile-link">TICKET</a></li>
+      </ul>
+      <ul class="mobile-sns">
+        <li><a href="https://x.com" target="_blank"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+    </nav>
+  </div>
+
+<!-- ここから私のターン -->
+    <main class="main-con">
+        <div class="schedule-background-top"></div>
+
+        <div class="container">
+            <h1 class="page-title">SCHEDULE</h1>
+            <section class="schedule-detail-area">
+                <h2 class="event-title">「あおぱれ Twinkle Spell☆聖夜のぱれっと」の詳細発表！</h2>
+
+                <div class="detail-section-wrapper">
+                    <div class="detail-section">
+                        <div class="section-heading">
+                            <h3>日程</h3>
+                        </div>
+                        <div class="section-content">
+                            <p>2025年12月25日（木）</p>
+                            <ul class="time-list">
+                                <li>12:00〜 グッズ販売/優先入場券配布</li>
+                                <li>14:30〜 開場</li>
+                                <li>16:00〜 開演</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="section-heading">
+                            <h3>会場</h3>
+                        </div>
+                        <div class="section-content">
+                            <p>ルミナスシアター</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="section-heading">
+                            <h3>チケット</h3>
+                        </div>
+                        <div class="section-content">
+                            <p>【プレミアムチケット】</p>
+                            <ul class="ticket-info-list">
+                                <li>価格：9,000円（税込）</li>
+                                <li>特典：①前方指定席 ②限定ポストカード配布</li>
+                            </ul>
+                            <p>【一般チケット】</p>
+                            <ul class="ticket-info-list">
+                                <li>価格：5,500円（税込）</li>
+                            </ul>
+                            <a href="../ticket_all/index.html" class="ticket-button"><span class=button-text>チケットはこちら</span></a>
+                            <p class="ticket-note">■チケット販売期間：<br>10月25日（土）18:00 〜 10月31日（金）23:59</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="section-heading">
+                            <h3>グッズ販売</h3>
+                        </div>
+                        <div class="section-content">
+                            <p class="note-text">
+                                グッズ販売は、公演当日、開場中・終演後に実施予定です。<br>
+                                お並び頂く際は係員の指示に従うようお願いします。<br>
+                                販売状況により時間の変更、販売の終了の可能性がございます。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <div class="section-heading">
+                            <h3>注意事項</h3>
+                        </div>
+                        <div class="section-content">
+                            <p class="caution-text">
+                                ※着席指定席は立ち上がっての観覧は出来ません。<br>                            
+                                ※着席指定席のお座席数には限りがございます。予めご了承ください。<br>                           
+                                体力に自信のない方、前のお座席の方が立たれてしまうと見えない方、コンサートを座ってご覧になりたい方の為のお席となります。<br>
+                                前方エリア・良席を確約するものではございません。予めご了承ください。<br>
+                                ※公演当日、入場の際または場内でランダムに身分証明証を確認させていただく場合がございます。<br>
+                                チケットに記載のお名前と身分証明書の情報が異なる場合は即退場とさせていただきます。<br>                        
+                                ※会場内での声出しの時間や大きさに制限はございませんが、公演の妨げになったり、他のお客様のご迷惑になったりするような声出しはご遠慮ください。<br>
+                                ※指定席内での過度なジャンプ、周りのお客様に迷惑となる行為は一切禁止とさせていただきます。<br>
+                                ※著しくまぶしい高輝度タイプの大閃光やウルトラオレンジ・改造サイリウム等、光が強く明るすぎるものは他のお客様への迷惑、鑑賞の妨げとなりますのでご使用を禁止とさせていただきます。<br>                          
+                                ※公式のうちわ（縦:約420mm×幅:約295mm）より大きいサイズのうちわ、また、サイズを問わずメッセージボード・ブックなどの持ち込み、使用は出来ません。<br>
+                                ※座席はお一人様につき、一席お申し込みが必要です。（※3歳以上のお子様はお座席が必要となります。）<br>
+                                ※チケットの譲渡、および転売は禁止とさせていただきます。
+                                ※不正行為によるチケット購入・入場ならびに会場内で他のお客様にチケットの転売を持ちかけるような行為が発覚した場合、その場で即刻退場とさせていただきます。<br>
+                                また、そのような行為を見かけられた方はお近くの係員または主催者スタッフまでお知らせください。<br>
+                                ※公演当日、収録のカメラが入る予定です。お客様が映り込む可能性もございますので、予めご了承ください。<br>                       
+                                ※公演が中止になった場合以外、チケットの払戻はいたしません。また公演途中中止の場合も払い戻しはいたしませんので予めご了承ください。<br>                            
+                                ※体調不良などの理由により、やむをえず出演メンバーが変更になる場合がございます。予めご了承ください。<br>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Backボタンエリア -->
+                <div class="back-link-area">
+                    <a href="../index.html" class="back-button"><span class="button-text">◁ Back</span></a>
+                </div>
+
+
+            </section>
+
+            <p class="pankuzu">
+              <a href="../index.html">TOP</a>
+              <span class="separator"></span>  <a href="../schedule_all/index.html">SCHEDULE</a>
+              <span class="separator"></span>  ライブ詳細
+            </p>
+
+        </div>
+        
+        <div class="schedule-background-bottom"></div>
+    </main>    
+<!-- ここまで私のターン -->
+
+
+<!-- フッター -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="../index.html" class="foot-logo">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+      </a>
+      <ul class="footer-list">
+        <li><a href="#">出演依頼はこちら</a></li>
+        <li><a href="../privacypolicy/index.html">プライバシーポリシー</a></li>
+      </ul>
+      <p class="copyright">&copy;2025 株式会社ラブクリエイト</p>
+    </div>
+  </footer>
+   
+</body>
+
+</html>

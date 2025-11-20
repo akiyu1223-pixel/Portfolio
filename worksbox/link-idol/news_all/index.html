@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALL NEWS | あおいろぱれっと</title>
+
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-1.11.2.min.js"></script>
+
+
+  <!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- ヘッダー隠し対応つき（共通JS） -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    (function(){
+      const btn   = document.getElementById('hamburger');
+      const panel = document.getElementById('mobileMenu');
+      if (!btn || !panel) return;
+
+      const openPanel = () => {
+        btn.setAttribute('aria-expanded','true');
+        panel.setAttribute('aria-hidden','false');
+        document.body.classList.add('is-menu-open');
+      };
+      const closePanel = () => {
+        btn.setAttribute('aria-expanded','false');
+        panel.setAttribute('aria-hidden','true');
+        document.body.classList.remove('is-menu-open');
+      };
+
+      btn.addEventListener('click', () => {
+        (btn.getAttribute('aria-expanded')==='true') ? closePanel() : openPanel();
+      });
+      panel.addEventListener('click', (e) => { if (e.target.closest('a')) closePanel(); });
+      document.addEventListener('click', (e) => {
+        const isOpen = panel.getAttribute('aria-hidden') === 'false';
+        if (!isOpen) return;
+        if (!e.target.closest('#mobileMenu') && !e.target.closest('#hamburger')) closePanel();
+      });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(); });
+      const mql = window.matchMedia('(max-width: 800px)');
+      mql.addEventListener('change', () => { if (!mql.matches) closePanel(); });
+    })();
+  });
+  </script>
+</head>
+
+<body class="page-newsall">
+  <!-- 共通ヘッダー（下層用パス） -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+     
+      <a href="../index.html" class="logo" aria-label="トップへ">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク">
+      </a>
+
+      <nav class="site-nav" aria-label="グローバルナビ">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../news_all/index.html">NEWS</a></li>
+          <li><a class="nav-link" href="../schedule_all/index.html">SCHEDULE</a></li>
+          <li><a class="nav-link" href="../index.html#profile">PROFILE</a></li>
+          <li><a class="nav-link" href="../music_all/index.html">MUSIC</a></li>
+          <li><a class="nav-link" href="../ticket_all/index.html">TICKET</a></li>
+        </ul>
+      </nav>
+
+      <ul class="sns-list" aria-label="SNSリンク">
+        <li><a href="https://x.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="メニューを開閉">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- スライドメニュー（SNSつき/ヘッダー非表示時に画面上端から出る） -->
+  <div class="mobile-panel" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="モバイルメニュー">
+      <ul class="mobile-list">
+        <li><a class="mobile-link" href="../news_all/index.html">NEWS</a></li>
+        <li><a class="mobile-link" href="../schedule_all/index.html">SCHEDULE</a></li>
+        <li><a class="mobile-link" href="../index.html#profile">PROFILE</a></li>
+        <li><a class="mobile-link" href="../music_all/index.html">MUSIC</a></li>
+        <li><a class="mobile-link" href="../ticket_all/index.html">TICKET</a></li>
+      </ul>
+      <ul class="mobile-sns">
+        <li><a href="https://x.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- 背景が左右隙間ゼロで全幅 -->
+  <section class="news-hero u-bleed">
+    <div class="u-bleed__inner">
+      <h1>ALL NEWS</h1>
+      <div class="all_news_button">
+        <a href="../news_all/index.html"><p>2025</p></a>
+        <a href="../news_all/index.html"><p>2024</p></a>
+        <a href="../news_all/index.html"><p>2023</p></a>
+        </div>
+
+    </div>
+  </section>
+
+  <main id="main" class="main-content" tabindex="-1">
+    <div class="news_nakami">
+      <a href="../news_detail/index.html"> 
+        <div class="news_kadomaru">
+        <div class="news_new_aikon">NEW</div>
+        <div class="news_hizuke_bun">
+          <div class="news_hizuke">2025.12.3</div>
+          <div class="news_bun">バレンタイン特典会＆フリーイベント開催決定！</div>
+        </div>
+      </div>
+      </a>
+
+      <div class="news_kadomaru">
+        <div class="news_new_aikon">NEW</div>
+        <div class="news_hizuke_bun">
+          <div class="news_hizuke">2025.11.1</div>
+          <div class="news_bun">「あおぱれ　Twinkle Spell☆聖夜のぱれっと」クリスマスライブ開催決定！
+</div>
+        </div>
+      </div>
+
+      <div class="news_kadomaru">
+        <div class="news_new_aikon_nasi">NEW</div>
+        <div class="news_hizuke_bun">
+          <div class="news_hizuke">2025.10.1</div>
+          <div class="news_bun">1st　Single「わたしに恋して」リリース＆
+ＭＶ公開決定！</div>
+        </div>
+      </div>
+
+      <div class="news_kadomaru">
+        <div class="news_new_aikon_nasi">NEW</div>
+        <div class="news_hizuke_bun">
+          <div class="news_hizuke">2025.9.1</div>
+          <div class="news_bun">公式グッズ販売会決定！</div>
+        </div>
+      </div>
+
+      <div class="news_kadomaru">
+        <div class="news_new_aikon_nasi">NEW</div>
+        <div class="news_hizuke_bun">
+          <div class="news_hizuke">2025.8.1</div>
+          <div class="news_bun">公式グッズ販売会決定！</div>
+        </div>
+      </div>
+
+      <div class="news_kadomaru">
+        <div class="news_new_aikon_nasi">NEW</div>
+        <div class="news_hizuke_bun">
+          <div class="news_hizuke">2025.7.1</div>
+          <div class="news_bun">公式グッズ販売会決定！</div>
+        </div>
+      </div>
+
+      <div class="news_kadomaru">
+        <div class="news_new_aikon_nasi">NEW</div>
+        <div class="news_hizuke_bun">
+          <div class="news_hizuke">2025.6.1</div>
+          <div class="news_bun">公式グッズ販売会決定！</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- フルブリード：Backボタン＋パンくずリスト -->
+<section class="sub-hero u-bleed">
+  <div class="u-bleed__inner">
+
+  <a href="../index.html" class="back-btn btn-outline-grad"
+   onclick="if (history.length > 1) { history.back(); return false; }">
+  <span class="ico">◁</span>
+  <span class="btn-label">Back</span>
+</a>
+
+
+    <!-- パンくずリスト（左寄せ） -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+  <a href="../index.html" class="breadcrumb__link">TOP</a>
+  <img src="../img/pankuzu_blueheart_w13_h10.png" alt="" aria-hidden="true">
+  <a href="../news_all/index.html" class="breadcrumb__link" aria-current="page">ALL NEWS</a>
+</nav>
+
+
+  </div>
+</section>
+
+
+  <!-- フッター共通 -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="foot-logo" href="../index.html" aria-label="トップへ">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク">
+      </a>
+      <ul class="footer-list" aria-label="フッターナビ">
+        <li><a href="#">出演依頼はこちら</a></li>
+        <li><a href="../privacypolicy/index.html">プライバシーポリシー</a></li>
+      </ul>
+      <p class="copyright">&copy; 2025 株式会社ラブクリエイト</p>
+    </div>
+  </footer>
+</body>
+</html>

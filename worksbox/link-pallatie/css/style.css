@@ -1,0 +1,2096 @@
+@charset "utf-8";
+
+/* font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+
+/* font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; */
+
+/* div{
+    border: 1px solid #000;
+    margin: 10px;
+} */
+
+body{
+    /* width: 100%; */
+    margin: 0 auto;
+    margin-left: 10%;
+}
+
+/* ボタンここから */
+
+.button-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    /* margin:0 200px; */
+    /* margin-left: 115px; */
+    padding: .9em 2em;
+    border: 2px solid #bddc9d;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 1em;
+}
+.button-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    /* margin-left: 115px; */
+    padding: .9em 2em;
+    border: 2px solid #bddc9d;
+    border-radius: 40px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 1em;
+}
+.button-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    margin-left: 400px;
+    margin-bottom: 40px;
+    padding: 8px 7px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    background-color: #bddc9d;
+    color: #ffffff;
+    font-size: 13px;
+}
+.button-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    margin-left: 400px;
+    margin-bottom: 40px;
+    padding: 8px 7px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    background-color: #bddc9d;
+    color: #ffffff;
+    font-size: 13px;
+}
+.button-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    /* margin:0 200px; */
+    margin-left: 470px;
+    padding: 15px 20px;
+    border: 2px solid #bddc9d;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 20px;
+}
+.button-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    /* margin:0 200px; */
+    margin-left: 500px;
+    padding: 15px 15px;
+    border: 2px solid #bddc9d;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 18px;
+}
+/* フッター来店予約 */
+.button-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    background-color: #bddc9d;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* 下層・予約 */
+.button-8 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    /* margin:0 200px; */
+    /* margin-left: 300px; */
+    padding: 15px 15px;
+    border: 2px solid #bddc9d;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 14px;
+}
+
+/* 下層・予約送信 */
+.button-9 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    /* margin:0 200px; */
+    /* margin-left: 300px; */
+    padding: 15px 15px;
+    border: 2px solid #bddc9d;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 14px;
+    margin-bottom: 180px;
+}
+
+/* 下層・問い合わせ送信 */
+.button-10 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    /* margin:0 200px; */
+    /* margin-left: 300px; */
+    padding: 15px 15px;
+    border: 2px solid #bddc9d;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 15px;
+    margin-bottom: 180px;
+}
+
+
+/* 下層・お店について */
+.button-11 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 335px;
+    /* margin-left: 115px; */
+    padding: .9em 2em;
+    border: 2px solid #bddc9d;
+    border-radius: 40px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 17px;
+}
+
+
+/* 下層・パラジウムについて */
+.button-12 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: flex-start;
+    width: 335px;
+    /* margin-left: 115px; */
+    padding: .9em 2em;
+    border: 2px solid #bddc9d;
+    border-radius: 40px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 16px;
+}
+
+
+/* 下層・メヴィウスリング */
+.button-13 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    /* margin:0 200px; */
+    /* margin-left: 300px; */
+    padding: 12px 10px;
+    border: 2px solid #bddc9d;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 15px;
+    /* margin-bottom: 180px; */
+}
+.button-14 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    margin-left: 130px;
+    margin-bottom: 40px;
+    padding: 8px 7px;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    background-color: #ffffff;
+    color: #5d5e5e;
+    font-size: 13px;
+}
+
+
+/* 商品一覧 */
+.button-15 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    margin-left: 210px;
+    margin-bottom: 40px;
+    padding: 8px 7px;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    background-color: #ffffff;
+    color: #5d5e5e;
+    font-size: 13px;
+}
+.button-16 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    /* margin:0 200px; */
+    margin-left: 860px;
+    margin-bottom: 180px;
+    padding: 15px 20px;
+    border: 2px solid #bddc9d;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 20px;
+}
+
+
+
+
+.btn-shop01{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+}
+.btn-shop02{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.btn-shop03{
+    color: #bddc9d;
+    margin-left: 10px;
+}
+
+.btn01{
+    justify-content: flex-start;
+}
+
+a:link{
+    text-decoration: none; color: #5d5e5e;
+}
+a:visited{
+    text-decoration: none; color: #5d5e5e;
+}
+a:hover{
+    text-decoration: none; color: #5d5e5e;
+}
+a:active{
+    text-decoration: none; color: #5d5e5e;
+}
+
+a img:hover{
+    opacity: 0.8;
+    transition: 0.7s;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ここまで */
+
+
+/* ヘッダー */
+header{
+    max-width: 1200px;
+    height: 60px;
+}
+.head-backimg{
+    max-width: 1200px;
+    height: 600px;
+    background-image:url(../img/top-img/images/top-img.png);
+}
+
+.header-fixed{
+    position: fixed;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+}
+
+.header-menu{
+    display: flex;
+    height: 50px;
+    background-color: #bddc9d;
+    border-radius: 30px;
+    align-items: center;
+    margin-left: 190px;
+    padding: 0 30px;
+    font-family: "Noto Serif", serif;
+    /* font-optical-sizing: auto;
+    font-weight: weight; */
+    font-style: normal;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight:900;
+    text-shadow: 1px 1px 5px #b1dd85;
+}
+.header-menu a:link{
+    text-decoration: none; color: #ffffff;
+}
+.header-menu a:visited{
+    text-decoration: none; color: #ffffff;
+}
+.header-menu a:hover{
+    text-decoration: none; color: #ffffff;
+}
+.header-menu a:active{
+    text-decoration: none; color: #ffffff;
+}
+
+.head-home{
+    margin-right: 30px;
+}
+.head-con{
+    margin-right: 30px;
+}
+.head-new{
+    margin-right: 30px;
+}
+.head-all{
+    margin-right: 30px;
+}
+.head-serv{
+    margin-right: 30px;
+}
+
+/* フッター */
+.foot-oya{
+    background-color: #bddc9d;
+    height: 350px;
+    max-width: 1200px;
+}
+.logo-sns{
+    display: flex;
+    max-width: fit-content;
+    margin-bottom: 30px;
+}
+.sns01{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.sns02{
+    margin-left: 35px;
+}
+
+.foot-box{
+    display: flex;
+}
+.yoyaku{
+    margin-bottom: 10px;
+    max-width: fit-content;
+}
+.yoyaku-txt01{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    color: #ffffff;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+.yoyaku-txt02{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    color: #ffffff;
+    margin-left: 60px;
+}
+.foot-menu{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    margin-top: 80px;
+}
+
+.foot-menu a:link{
+    text-decoration: none; color: #ffffff;
+}
+.foot-menu a:visited{
+    text-decoration: none; color: #ffffff;
+}
+.foot-menu a:hover{
+    text-decoration: none; color: #ffffff;
+}
+.foot-menu a:active{
+    text-decoration: none; color: #ffffff;
+}
+
+.foot-menu01{
+    margin-left: 120px;
+}
+.foot-menu02{
+    margin-left: 100px;
+}
+
+.foot-txt01{
+    margin-bottom: 15px;
+}
+.foot-txt06{
+    margin-bottom: 15px;
+}
+
+.foot-txt02{
+    margin-bottom: 15px;
+}
+.foot-txt07{
+    margin-bottom: 15px;
+}
+
+.foot-txt03{
+    margin-bottom: 15px;
+}
+.foot-txt08{
+    margin-bottom: 15px;
+}
+
+.foot-txt04{
+    margin-bottom: 15px;
+}
+
+.copyright{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 13px;
+    margin-left: 635px;
+    margin-top: 57px;
+}
+
+
+
+/* コンセプト */
+
+.tag-icon01{
+    display: flex;
+    margin-top: 750px;
+    /* margin-left: 990px; */
+    margin-left: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    max-width: fit-content;
+}
+
+h1{
+    margin-left: 10px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    color: #5d5e5e;
+}
+
+.concept{
+    display: flex;
+    margin-left: 10px;
+}
+.txt01{
+    margin-right: 95px;
+    padding-left: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.con-oya{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 25px;
+    /* margin-left: 130px; */
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
+}
+.con-p{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    color: #5d5e5e;
+    line-height: 35px;
+    /* margin-left: 130px; */
+    margin-bottom: 20px;
+}
+.con-p2{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    color: #5d5e5e;
+    line-height: 30px;
+    /* margin-left: 130px; */
+    margin-bottom: 50px;
+}
+.con-p2-01{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 17px;
+}
+
+.con-btn01{
+    max-width: fit-content;
+    /* margin-top: 60px; */
+    margin-bottom: 20px;
+    /* margin-left: 90px; */
+}
+.con-btn02{
+    max-width: fit-content;
+    /* margin-left: 110px; */
+}
+
+.con-img01{
+    margin-left: 80px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* 新商品 */
+
+.newitem{
+    display: flex;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+.new01{
+    background-color: #bddc9d;
+    max-width: fit-content;
+    border-radius: 30px;
+    margin-left: 25px;
+    padding-top: 30px;
+}
+.new02{
+    background-color: #bddc9d;
+    max-width: fit-content;
+    border-radius: 30px;
+    margin-left: 30px;
+    padding-top: 30px;
+}
+
+.tag-icon02{
+    display: flex;
+    margin-left: 335px;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.new-img01{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+.new-img02{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* .new-txt01{} */
+.mevius00{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.mevius01{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 22px;
+    color: #5d5e5e;
+}
+.mevius02{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    color: #5d5e5e;
+    margin-left: 195px;
+}
+
+.mevius000{
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+.mevius03{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: #5d5e5e;
+}
+.mevius0000{
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+.mevius04{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    color: #5d5e5e;
+}
+
+
+/* .new-txt02{} */
+.gimmel00{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.gimmel01{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 22px;
+    color: #5d5e5e;
+}
+.gimmel02{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    color: #5d5e5e;
+    margin-left: 235px;
+}
+
+.gimmel000{
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+.gimmel03{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: #5d5e5e;
+    /* justify-content: flex-start; */
+}
+.gimmel0000{
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+.gimmel04{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    color: #5d5e5e;
+}
+
+/* サービスについて */
+
+.tag-icon03{
+    display: flex;
+    margin-top: 200px;
+    /* margin-left: 920px; */
+    margin-bottom: 60px;
+    align-items: center;
+    width: fit-content;
+}
+
+.ser01{
+    display: flex;
+    margin-bottom: 150px;
+}
+
+.ser-img01{
+    margin-bottom: 40px;
+}
+.ser-img02{
+    margin-left: 150px;
+}
+
+.txt02{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ser-txt02-box{
+    justify-content: flex-start;
+}
+
+.ser-txt01{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 30px;
+    margin-top: 80px;
+    margin-left: 130px;
+}
+.ser-txt02{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    color: #5d5e5e;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 130px;
+}
+.ser-txt03{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    color: #5d5e5e;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 153px;
+    list-style-type: circle;
+}
+.ser-txt04{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    color: #5d5e5e;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 130px;
+}
+
+.ser02{
+    display: flex;
+    margin-bottom: 200px;
+}
+
+.txt03{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ser-txt05{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 30px;
+    margin-top: 80px;
+    /* margin-left: 100px; */
+}
+.ser-txt06{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    color: #5d5e5e;
+    font-size: 20px;
+    margin-top: 50px;
+    /* margin-left: 100px; */
+}
+
+.ser-img03{
+    margin-left: 170px;
+}
+
+/* アクセス */
+.tag-icon04{
+    display: flex;
+    margin-top: 150px;
+    /* margin-left: 1010px; */
+    margin-bottom: 30px;
+    align-items: center;
+    width: fit-content;
+}
+.acc-img{
+    margin-left: 70px;
+    margin-bottom: 3px;
+}
+
+.acc-map{
+    margin-left: 85px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 17px;
+}
+.acc-map a:link{
+    text-decoration: none; color: #5d5e5e;
+}
+.acc-map a:visited{
+    text-decoration: none; color: #5d5e5e;
+}
+.acc-map a:hover{
+    text-decoration: underline; color: #919292;
+}
+.acc-map a:active{
+    text-decoration: underline; color: #5d5e5e;
+}
+
+.access-box{
+    display: flex;
+}
+
+.txt04{
+    margin-left: 70px;
+    justify-content: flex-start;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5d5e5e;
+}
+.txt05{
+    display: flex;
+    font-size: 16px;
+}
+.acc-txt06{
+    margin-right: 20px;
+}
+.txt06{
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.acc-txt08{
+    margin-right: 35px;
+}
+
+.acc-txt03{
+    font-size: 16px;
+}
+.acc-txt04{
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.acc-txt05{
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.acc-txt10{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.acc-txt02{
+    margin-bottom: 35px;
+}
+.acc-txt11{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.acc-txt12{
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+.acc-txt13{
+    font-size: 14px;
+}
+
+.acc-btn{
+    margin-bottom: 180px;
+}
+
+/* 下層-来店予約 */
+
+.tag-icon05{
+    display: flex;
+    margin-top: 130px;
+    /* margin-left: 945px; */
+    margin-left: 100px;
+
+    margin-bottom: 130px;
+    align-items: center;
+    width: fit-content;
+}
+.tag-icon06{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-bottom: 150px;
+    align-items: center;
+    width: fit-content;
+}
+
+.reservation{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5d5e5e;
+    /* margin-left: 80px; */
+}
+.reser-shop{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+}
+
+.reser-txt00{
+    margin-top: 100px;
+    /* margin-left: 150px; */
+    margin-bottom: 180px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+}
+.reser-txt01{
+    margin-bottom: 110px;
+}
+.reser-txt02{
+    margin-bottom: 110px;
+}
+
+.reser-txt000{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #bddc9d;
+    padding: 70px 100px;
+    color: #fff;
+}
+.reser-txt-box{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 250px;
+}
+
+.reser-txt04{
+    font-size: 25px;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    /* color: #fff; */
+    margin-bottom: 70px;
+
+    padding:0 .4em .2em;
+    border-bottom: 3px dashed #ffffff;
+}
+.reser-txt05{
+    font-size: 23px;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+.reser-txt07{
+    font-size: 23px;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+.reser-txt10{
+    font-size: 23px;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+.reser-txt06{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.reser-txt08{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.reser-txt09{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.reser-txt11{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.reser-txt12{
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+
+
+.reser-box-oya{
+    /* border: 2px solid #bddc9d;
+    margin: 10px; */
+    /* justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */ 
+    width: fit-content;
+    margin-left: 250px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5d5e5e;
+}
+.reser-box00{
+    display: flex;
+}
+
+.reser-box01{
+    margin-bottom: 20px;
+}
+.reser-box02{
+    margin-bottom: 70px;
+    margin-left: 70px;
+}
+.reser-box03{
+    margin-bottom: 20px;
+}
+
+.reser-box04{
+    display: flex;
+    align-items: flex-end;
+}
+.reser-box05{
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.reser-box06{
+    margin-bottom: 50px;
+}
+.reser-box07{
+    margin-bottom: 20px;
+}
+.reser-box08{
+    margin-bottom: 50px;
+}
+.reser-box09{
+    margin-bottom: 20px;
+    /* margin-left: 50px; */
+}
+
+.reser01{
+    display: flex;
+}
+
+
+
+.reser01-txt{
+    font-size: 16px;
+}
+.reser02-txt{
+    font-size: 16px;
+}
+.reser03-txt{
+    font-size: 16px;
+}
+.reser04-txt{
+    font-size: 14px;
+    color: #ff4545;
+    margin-left: 10px;
+}
+.reser05-txt{
+    font-size: 23px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5d5e5e;
+    margin-left: 10px;
+}
+.reser06-txt{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.reser07-txt{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.reser08-txt{
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+
+
+    /* 予約記入枠 */
+/* .textbox-2-label,
+.textbox-2 {
+    color: #5d5e5e;
+}
+.textbox-2-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.textbox-2 {
+    width: 300px;
+    padding: 8px 30px;
+    border: 1px solid #d2d2d2;
+    border-radius: 25px;
+    background: #f5f5f5;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.textbox-2::placeholder {
+    color: #999;
+} */
+
+.selectbox-3 {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.selectbox-3::after {
+    position: absolute;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    background-color: #7d7e7e;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox-3 select {
+    appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .5em calc(.8em + 30px) .4em .9em;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+
+
+
+.selectbox-4 {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.selectbox-4::after {
+    position: absolute;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    background-color: #7d7e7e;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox-4 select {
+    appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .5em calc(.8em + 30px) .4em .9em;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #5d5e5e;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* 氏名 */
+.textbox-1 {
+    width: 275px;
+    padding: 8px 10px;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.textbox-1::placeholder {
+    color: #bddc9d;
+}
+
+/* 電話番号 */
+.textbox-2 {
+    width: 275px;
+    padding: 8px 10px;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.textbox-2::placeholder {
+    color: #bddc9d;
+}
+
+/* メールアドレス */
+.textbox-3 {
+    width: 600px;
+    padding: 8px 10px;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.textbox-3::placeholder {
+    color: #bddc9d;
+}
+
+/* 希望デザイン */
+.textbox-4 {
+    width: 300px;
+    padding: 8px 10px;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.textbox-4::placeholder {
+    color: #bddc9d;
+}
+
+/* 質問・要望 */
+.textbox-5 {
+    width: 600px;
+    padding: 8px 10px;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    color: #333;
+    font-size: 1em;
+    line-height: 8;
+}
+
+.textbox-5::placeholder {
+    color: #bddc9d;
+}
+
+
+/* お問い合わせフォーム */
+
+.faq-box00{
+    display: flex;
+}
+
+.faq-box-oya{
+    width: fit-content;
+    margin-left: 250px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5d5e5e;
+}
+
+.tag-icon07{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-bottom: 150px;
+    align-items: center;
+    width: fit-content;
+}
+.faq01-txt{
+    font-size: 23px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5d5e5e;
+    margin-left: 10px;
+}
+
+.faq-box01{
+    display: flex;
+}
+.faq-box02{
+    margin-bottom: 20px;
+}
+.faq-box03{
+    margin-bottom: 70px;
+    margin-left: 70px;
+}
+.faq-box04{
+    margin-bottom: 20px;
+}
+.faq-box05{
+    display: flex;
+    align-items: flex-end;
+}
+.faq-box06{
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.faq-box07{
+    margin-bottom: 50px;
+}
+.faq-box08{
+    margin-bottom: 20px;
+}
+.faq-box098{
+    margin-bottom: 50px;
+}
+
+
+.faq-txt00{
+    /* margin-top: 100px; */
+    /* margin-left: 150px; */
+    margin-bottom: 110px;
+    margin-left: 250px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 16px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5d5e5e;
+}
+.faq-txt01{
+    margin-bottom: 50px;
+}
+.faq-txt02{
+    margin-bottom: 20px;
+}
+.faq-txt03{
+    margin-bottom: 20px;
+}
+.faq-txt04{
+    margin-bottom:60px;
+}
+.faq-txt05{
+    margin-bottom: 9px;
+    font-size: 15px;
+}
+.faq-txt06{
+    margin-bottom: 9px;
+    font-size: 15px;
+}
+
+.textbox-6 {
+    width: 600px;
+    padding: 8px 10px;
+    border: 2px solid #bddc9d;
+    border-radius: 25px;
+    color: #333;
+    font-size: 1em;
+    line-height: 13;
+    margin-bottom: 50px;
+}
+
+
+/* pallatieについて */
+
+.about-00{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+    margin-left: 10px;
+}
+
+.tag-icon08{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    max-width: fit-content;
+    font-size: 23px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+}
+
+.about-shop-oya{
+    max-width: 1200px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 18px;
+}
+.aboutus-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-01{
+    margin-bottom: 100px;
+}
+
+.about-txt01{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 26px;
+    margin-bottom: 45px;
+}
+.about-txt02{
+    margin-bottom: 10px;
+}
+.about-txt03{
+    margin-bottom: 50px;
+}
+
+.about-btn{
+    margin-bottom: 200px;
+}
+
+.about-2{
+    display: flex;
+    margin-bottom: 150px;
+}
+.about-02{
+    margin-left: 50px;
+}
+.about-03{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 170px;
+    font-size: 17px;
+}
+
+.about-txt04{
+    margin-bottom: 170px;
+    /* margin-top: 110px; */
+}
+
+.about-3{
+    display: flex;
+    margin-bottom: 150px;
+}
+.about-04{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 170px;
+    margin-right: 170px;
+    font-size: 17px;
+}
+.about-05{
+    /* margin-left: 690px; */
+    max-width: fit-content;
+}
+
+.about-4{
+    display: flex;
+    margin-bottom: 150px;
+}
+.about-06{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 170px;
+    margin-right: 260px;
+    font-size: 17px;
+}
+.about-07{
+    /* margin-left: 690px; */
+    max-width: fit-content;
+}
+
+.about-txt07{
+    margin-bottom: 10px;
+}
+.about-txt08{
+    margin-bottom: 120px;
+}
+
+
+/* パラジウムについて */
+
+.tag-icon09{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    max-width: fit-content;
+    font-size: 23px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+}
+
+.palladium-oya{
+    max-width: 1200px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 18px;
+}
+
+.palla-00{
+    margin-left: 10px;
+}
+
+
+.palla-1{
+    display: flex;
+    margin-bottom: 170px;
+}
+.palla-01{
+    margin-left: 50px;
+}
+.palla-02{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 50px; */
+    font-size: 17px;
+}
+.palla-01{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+    margin-right: 120px;
+    font-size: 17px;
+}
+.palla-02{
+    /* margin-left: 690px; */
+    max-width: fit-content;
+}
+.palla-txt01{
+    margin-bottom: 70px;
+}
+.palla-txt02{
+    margin-bottom: 10px;
+}
+
+.heading-1 {
+    padding: .2em .5em;
+    border-left: 9px solid #bddc9d;
+    color: #5d5e5e;
+    margin-left: 100px;
+    margin-bottom: 130px;
+}
+
+.palla-02{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.palla-03{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.palla-img01{
+    margin-top: 4px;
+}
+
+.palla-txt04{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 26px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+.palla-04{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.palla-txt05{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.palla-txt06{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 250px;
+}
+.palla-txt07{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 270px;
+}
+.palla-txt08{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 200px;
+}
+
+.ruby-01{
+    align-items: flex-end
+}
+
+.palla-btn{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+
+
+/* メヴィウスリング詳細 */
+
+.mevius-oya{
+    /* display: flex; */
+    max-width: 1200px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+    margin-top: 100px;
+}
+.mevius-box01{
+    display: flex;
+}
+
+.mev-1{
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 180px;
+}
+.mev-2{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.mev-01{
+    margin-left: 15px;
+}
+.mev-02{
+    display: flex;
+}
+
+/* .mev-02{
+    display: flex;
+} */
+.mev-04{
+    display: flex;
+}
+
+.mev-sabimg01{
+    margin-bottom: 10px;
+}
+.mev-sabimg02{
+    margin-bottom: 10px;
+}
+
+.mev-item01{
+    margin-bottom: 30px;
+}
+.mev-item02{
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+.mev-item03{
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.mev-item04{
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.mev-txt01{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.mev-txt02{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.mev-txt03{
+    font-size: 16px;
+}
+.txt-sabbox01{
+    font-size: 14px;
+}
+
+.mev-btn{
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+.mev-txt08{
+    margin-bottom: 7px;
+}
+.mev-txt12{
+    margin-bottom: 7px;
+}
+
+.mev-txt09{
+    margin-bottom: 7px;
+}
+.mev-txt13{
+    margin-bottom: 7px;
+}
+
+.mev-txt10{
+    margin-bottom: 7px;
+}
+.mev-txt14{
+    margin-bottom: 7px;
+}
+
+.mev-6{
+    font-size: 12px;
+}
+.mev-txt16{
+    margin-bottom: 5px;
+}
+.mev-txt17{
+    margin-bottom: 5px;
+}
+
+.mev-txt04{
+    margin-bottom: 5px;
+}
+.mev-txt05{
+    margin-bottom: 5px;
+}
+.mev-txt06{
+    margin-bottom: 5px;
+}
+
+.heading-2 {
+    padding: .2em .5em;
+    border-left: 9px solid #bddc9d;
+    color: #5d5e5e;
+    margin-left: 50px;
+    margin-bottom: 90px;
+}
+
+.mev-06{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+.mev-itemtxt01{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.mev-itemtxt02{
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+.txt-sabbox02{
+    font-size: 14px;
+}
+.mev-allitem-img{
+    margin-bottom: 10px;
+}
+
+.mevius-box02{
+    margin-bottom: 130px;
+}
+
+
+/* 商品一覧 */
+
+.tag-icon10{
+    display: flex;
+    margin-top: 130px;
+    /* margin-left: 1000px; */
+    margin-bottom: 100px;
+    align-items: center;
+    max-width: fit-content;
+    font-size: 23px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+}
+.heading-3 {
+    padding: .2em .5em;
+    border-left: 9px solid #bddc9d;
+    color: #5d5e5e;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.allitem-oya{
+    /* display: flex; */
+    max-width: 1200px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+}
+.all-1{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 90px;
+}
+
+.allitem-img1{
+    margin-bottom: 10px;
+}
+
+.allitem-txt01{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.allitem-txt02{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.txt-sabbox03{
+    font-size: 17px;
+}
+
+.all-img{
+    margin-bottom: 10px;
+}
+
+.allitem-02{
+    margin-right: 390px;
+}
+
+.all-2{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 70px;
+}
+.all-3{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom:75px;
+}
+
+
+/* プライバシーポリシー */
+
+.policy-oya{
+    max-width: 1200px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.policy-01{
+    margin-top: 150px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.po-txt01{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5d5e5e;
+    font-size: 26px;
+    max-width: fit-content;
+    padding:0 .4em .2em;
+    border-bottom: 3px dashed #bddc9d;
+    background-color: #ffffff;
+    color: #5d5e5e;
+}
+
+.policy-02{
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.po-txt02{
+    max-width: 700px;
+    font-size: 16px;
+}
+
+.policy-03{
+    max-width: 950px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 250px;
+}
+.policy-maintxt{
+    font-size: 23px;
+    margin-bottom: 40px;
+}
+
+.policy-04{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.po-txt03{
+    max-width: 700px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.policy-05{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.policy-06{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.policy-07{
+    max-width: 950px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 250px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.policy-08{
+    max-width: 950px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 250px;
+    margin-bottom: 100px;
+}
+
+.policy-08 a:link{
+    text-decoration: underline; color: #8f8f8f;
+}
+.policy-08 a:visited{
+    text-decoration: underline; color: #8f8f8f;
+}
+.policy-08 a:hover{
+    text-decoration: underline; color: #cdcdcd;
+}
+.policy-08 a:active{
+    text-decoration: underline; color: #8f8f8f;
+}
+
+.policy-09{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 180px;
+}
+
+/* .po-txt04{
+    width: 700px;
+    font-size: 18px;
+} */
+.po-txt05{
+    max-width: 700px;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 70px;
+}
+.po-txt06{
+    max-width: 700px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.policy-oya li{
+    margin-bottom: 10px;
+}
+

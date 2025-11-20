@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>MUSIC｜あおいろぱれっと</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<script src="js/jquery-1.11.2.min.js"></script>
+
+<!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<!-- ハンバーガーメニュー -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById('hamburger');
+    const panel = document.getElementById('mobileMenu');
+    if (!btn || !panel) return;
+
+    const closePanel = () => {
+      btn.setAttribute('aria-expanded', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+    };
+
+    const openPanel = () => {
+      btn.setAttribute('aria-expanded', 'true');
+      panel.setAttribute('aria-hidden', 'false');
+    };
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      expanded ? closePanel() : openPanel();
+    });
+
+    panel.addEventListener('click', (e) => {
+      if (e.target.closest('a')) closePanel();
+    });
+
+    document.addEventListener('click', (e) => {
+      const isOpen = panel.getAttribute('aria-hidden') === 'false';
+      if (!isOpen) return;
+      const insidePanel = e.target.closest('#mobileMenu');
+      const isButton = e.target.closest('#hamburger');
+      if (!insidePanel && !isButton) closePanel();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePanel();
+    });
+
+    const mql = window.matchMedia('(max-width: 800px)');
+    mql.addEventListener('change', () => {
+      if (!mql.matches) closePanel();
+    });
+  });
+  </script>
+</head>
+
+<body class="page-home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+      </a>
+
+      <nav class="site-nav" aria-label="グローバルナビ">
+        <ul class="nav-list">
+          <li><a href="../news_all/index.html" class="nav-link">NEWS</a></li>
+          <li><a href="../schedule_all/index.html" class="nav-link">SCHEDULE</a></li>
+          <li><a href="../index.html#profile" class="nav-link">PROFILE</a></li>
+          <li><a href="../music_all/index.html" class="nav-link">MUSIC</a></li>
+          <li><a href="../ticket_all/index.html" class="nav-link">TICKET</a></li>
+        </ul>
+      </nav>
+
+      <!-- SNSリンク（PC表示） -->
+      <ul class="sns-list">
+        <li><a href="https://x.com" target="_blank"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- スマホ用メニュー（SNS付き） -->
+  <div class="mobile-panel" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="モバイルメニュー">
+      <ul class="mobile-list">
+        <li><a href="../news_all/index.html" class="mobile-link">NEWS</a></li>
+        <li><a href="../schedule_all/index.html" class="mobile-link">SCHEDULE</a></li>
+        <li><a href="../profile/index.html" class="mobile-link">PROFILE</a></li>
+        <li><a href="../all_music/index.html" class="mobile-link">MUSIC</a></li>
+        <li><a href="../ticket_list/index.html" class="mobile-link">TICKET</a></li>
+      </ul>
+      <ul class="mobile-sns">
+        <li><a href="https://x.com" target="_blank"><img src="../img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="../img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="../img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="../img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+    </nav>
+  </div>
+
+<!-- ==========ここから私のターン========== -->
+ <main class="main-content">
+    
+    <div class="music-background-top"></div>
+
+    <div class="container">
+        <h1 class="page-title">MUSIC</h1>
+
+        <div class="music-detail-area">
+            
+            <a href="../music_all/index.html" class="all-music-label" aria-label="MUSIC一覧へ">ALL MUSIC</a>
+
+            <section class="music-intro-section">
+                <div class="song-info">
+                    <p class="date">2025.11.1 Release</p>
+                    <h2 class="song-title">わたしに恋して</h2>
+                    <p class="description">
+                        活動3周年を迎えたあおいろぱれっとの1st singleの発売が決定！<br>
+                        好きな人に振り向いてほしい！という女の子の気持ちに寄り添う、<br>
+                        甘酸っぱい青春を思い出すラブソング。<br>
+                    </p>
+                    <a href="https://www.youtube.com" class="mv-button">
+                        <img src="../img/head_icon_YouTube.png" alt="YouTubeアイコン">
+                        MVはこちら
+                    </a>
+                </div>
+                <div class="jacket-image">
+                    </div>
+            </section>
+
+            <section class="detail-section-wrapper">
+                <div class="detail-section">
+                    <div class="section-heading">
+                        <h3>収録曲</h3>
+                    </div>
+                    <div class="section-content">
+                        <h4 class="track-title">1.  わたしに恋して</h4>
+                        <p>
+                            活動3周年を迎えたあおいろぱれっとの1st singleの発売が決定！<br>
+                            好きな人に振り向いてほしい！という女の子の気持ちに寄り添う、<br>
+                            甘酸っぱい青春を思い出すラブソング。<br>
+                            <br>
+                            作詞：松井あかね<br>
+                            作曲/編曲：A-ta（wasii）・武田耀司
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="section-heading">
+                        <h3>カップリング曲</h3>
+                    </div>
+                    <div class="section-content">
+                        <h4 class="track-title">2.  みずいろの夢</h4>
+                        <p>
+                            「応援してくれるファンのみなさんに感謝の思いを伝えたい」<br>
+                            というメンバーの声から生まれた楽曲。<br>
+                            これまでの軌跡や、これからの夢に駆け抜けていく<br>
+                            あおいろぱれっとの思いを込めて、あなたにお届けします。<br>
+                            <br>
+                            作詞：真瀬そよん・雲母坂はるあ・瀬生由希・sasaki hajime<br>
+                            作曲：	堀井健太<br>
+                            編曲：A-ta（wasii）
+                        </p>
+                        
+                        <h4 class="track-title">3.  超絶Love u !</h4>
+                        <p>
+                            「私のことをもっともっともっと好きになって！」<br>
+                            わがままでキュートな女の子の心境をポップに描く、”きゅんかわ”ソング。<br>
+                            この楽曲を聞けば、あおいろぱれっとのことをもっと好きになるに違いない！<br>
+                            <br>
+                            作詞：小滝実花<br>
+                            作曲：武田耀司<br>
+                            編曲：水無月
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="section-heading">
+                        <h3>各配信サイト</h3>
+                    </div>
+                    <div class="section-content">
+                        <ul class="distribution-list">
+                            <li><a href="#">iTunes / Apple Music</a></li>
+                            <li><a href="#">Spotify</a></li>
+                            <li><a href="#">LINE MUSIC</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Backボタンエリア -->
+            <div class="back-link-area">
+                <a href="../index.html" class="back-button"><span class="button-text">◁ Back</span></a>
+            </div>
+
+
+        </div> 
+    </div> 
+    <div class="container">
+        <p class="pankuzu">
+          <a href="../index.html">TOP</a>
+          <span class="separator"></span>  MUSIC
+        </p>
+    </div>
+
+    <div class="music-background-bottom"></div>
+
+</main>
+
+
+
+<!-- フッター -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="../index.html" class="foot-logo">
+        <img src="../img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+      </a>
+      <ul class="footer-list">
+        <li><a href="#">出演依頼はこちら</a></li>
+        <li><a href="../privacypolicy/index.html">プライバシーポリシー</a></li>
+      </ul>
+      <p class="copyright">&copy;2025 株式会社ラブクリエイト</p>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>あおいろぱれっと</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--jQuery本体-->
+<script src="js/jquery-1.11.2.min.js"></script>
+
+<!-- モーダルウィンドウ -->
+<link href="js/lightbox2-2.11.5/lightbox2-2.11.5/dist/css/lightbox.css" rel="stylesheet"> 
+<script src="js/lightbox2-2.11.5/lightbox2-2.11.5/dist/js/lightbox-plus-jquery.min.js"></script>
+
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+
+
+//   ハンバーガーメニュー
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById('hamburger');
+    const panel = document.getElementById('mobileMenu');
+    if (!btn || !panel) return;
+
+    const closePanel = () => {
+      btn.setAttribute('aria-expanded', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+    };
+
+    const openPanel = () => {
+      btn.setAttribute('aria-expanded', 'true');
+      panel.setAttribute('aria-hidden', 'false');
+    };
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      expanded ? closePanel() : openPanel();
+    });
+
+    panel.addEventListener('click', (e) => {
+      if (e.target.closest('a')) closePanel();
+    });
+
+    document.addEventListener('click', (e) => {
+      const isOpen = panel.getAttribute('aria-hidden') === 'false';
+      if (!isOpen) return;
+      const insidePanel = e.target.closest('#mobileMenu');
+      const isButton = e.target.closest('#hamburger');
+      if (!insidePanel && !isButton) closePanel();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePanel();
+    });
+
+    const mql = window.matchMedia('(max-width: 800px)');
+    mql.addEventListener('change', () => {
+      if (!mql.matches) closePanel();
+    });
+  });
+
+</script>
+
+</head>
+
+<body class="page-top">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+      </a>
+
+      <nav class="site-nav" aria-label="グローバルナビ">
+        <ul class="nav-list">
+          <li><a href="news_all/index.html" class="nav-link">NEWS</a></li>
+          <li><a href="schedule_all/index.html" class="nav-link">SCHEDULE</a></li>
+          <li><a href="index.html#profile" class="nav-link">PROFILE</a></li>
+          <li><a href="music_all/index.html" class="nav-link">MUSIC</a></li>
+          <li><a href="ticket_all/index.html" class="nav-link">TICKET</a></li>
+        </ul>
+      </nav>
+
+      <!-- SNSリンク（PC表示） -->
+      <ul class="sns-list">
+        <li><a href="https://x.com" target="_blank"><img src="img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- スマホ用メニュー（SNS付き） -->
+  <div class="mobile-panel" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="モバイルメニュー">
+      <ul class="mobile-list">
+        <li><a href="news_all/index.html" class="mobile-link">NEWS</a></li>
+        <li><a href="schedule_all/index.html" class="mobile-link">SCHEDULE</a></li>
+        <li><a href="index.html#profile" class="mobile-link">PROFILE</a></li>
+        <li><a href="music_all/index.html" class="mobile-link">MUSIC</a></li>
+        <li><a href="ticket_all/index.html" class="mobile-link">TICKET</a></li>
+      </ul>
+      <ul class="mobile-sns">
+        <li><a href="https://x.com" target="_blank"><img src="img/head_icon_X.png" alt="X"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img src="img/head_icon_Instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><img src="img/head_icon_YouTube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank"><img src="img/head_icon_TikTok.png" alt="TikTok"></a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+    <main>
+<!-- 下層ページはここから下を変える    -->  
+
+    <div class="main_visual">
+        <div class="mv">
+            <div class="back_1">
+            <img src="img/uneune.png" alt=" ">   
+            </div>    
+        </div>
+    </div>
+    <div class="sec_1">
+        <!-- <img src="img/top_img/NEWS_back.png" alt=" "> -->
+        <div class="top_music">
+            <span class="music1"><img src="img/Old_MUSIC1.png" alt=" "></span>
+            <a href="music_detail/index.html"><span class="music2"><img src="img/NEW_MUSIC.png" alt=" "></span></a>
+            <span class="music3"><img src="img/Old_MUSIC2.png" alt=" "></span>
+        </div>
+        <div class="top_news">
+            <h1 class="news_1">NEWS</h1>
+            <div class="news_2">
+                <div class="news_box1">
+                        <div class="new_tag1">
+                            <div class="new">
+                                <p class="txt_new">NEW</p>
+                            </div>
+                        </div>
+                    <a href="news_detail/index.html">
+                    <div class="news_txt_box">
+                        <div class="kousinnbi">
+                            <p>2025.12.03</p>
+                        </div>
+                        <div class="syousai">
+                            <p>2026年2月14日(土)　バレンタイン特典会＆フリーイベント開催決定！</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="news_box2">
+                        <div class="new_tag2">
+                            <div class="new2">
+                                <p class="txt_new2">NEW</p>
+                            </div>
+                        </div>
+                    <div class="news_txt_box2">
+                        <div class="kousinnbi2">
+                            <p>2025.11.01</p>
+                        </div>
+                        <div class="syousai2">
+                            <p>2025年12月25日(木)「あおぱれ　Twinkle Spell☆聖夜のぱれっと」クリスマスライブ開催決定！</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news_box3">
+                        <!-- <div class="new_tag1">
+                            <div class="new">
+                                <p class="txt_new">NEW</p>
+                            </div>
+                        </div> -->
+                    <div class="news_txt_box3">
+                        <div class="kousinnbi3">
+                            <p>2025.10.01</p>
+                        </div>
+                        <div class="syousai3">
+                            <p>2025年11月1日(土)　1st Single「わたしに恋して」リリース＆ＭＶ公開決定！</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view_btn">
+                    <a href="news_all/index.html"><div class="btn-outline-grad"><span class="btn_txt01">もっと見る</span></div></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="sec_2">
+        <h1 class="sche_1">SCHEDULE</h1>
+
+        <div class="sche_2">
+            <a href="schedule_detail/index.html">
+            <div class="box1">
+                <div class="ko_1">
+                    <div class="hizuke">
+                        <h3 class="txt_1">12/25</h3>
+                        <img src="img/schedule_heart.png" alt=" ">
+                    </div>
+                    <div class="sche_tag1">
+                        <p>LIVE</p>
+                    </div>
+                </div>
+                <div class="txt_4">
+                    <p>「あおぱれ　Twinkle Spell☆聖夜のぱれっと」</p>
+                </div>
+            </div>
+            </a>
+
+            <div class="box2">
+                <div class="ko_2">
+                    <div class="hizuke">
+                        <h3 class="txt_2">2/14</h3>
+                        <img src="img/schedule_heart.png" alt=" ">
+                    </div>
+                    <div class="sche_tag2">
+                        <p>LIVE</p>
+                    </div>
+                </div>
+                <div class="txt_4">
+                    <p>「バレンタイン特典会＆フリーイベント」</p>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="ko_3">
+                    <div class="hizuke">
+                        <h3 class="txt_3">4/16</h3>
+                        <img src="img/schedule_heart.png" alt=" ">
+                    </div>
+                    <div class="sche_tag3">
+                        <p>LIVE</p>
+                    </div>
+                </div>
+                <div class="txt_4">
+                    <p>「あおぱれ　お誕生日☆ライブ」</p>
+                </div>
+            </div>
+        </div>
+        <div class="view_btn">
+            <a href="schedule_all/index.html"><div class="btn-outline-grad"><span class="btn_txt01">もっと見る</span></div></a>
+        </div>
+    </div>
+
+    <div class="sec_3" id="profile">
+        <h1 class="prof_1">PROFILE</h1>
+        <div class="prof_2">
+            <div class="prof_group">
+                <div class="group_photo">
+                    <img src="img/group_profile.png" alt="あおいろぱれっとのグループビジュアル写真">
+                    <div class="group_txt">
+                        <p>「あおいろぱれっと」は、”絵の具”をテーマにしたガールズアイドルグループ。<br>あおいろ（青）をベースに、それぞれが個性という”色”を持ち寄り、ステージで一枚の絵を描くようにパフォーマンスを届ける。<br>爽やかで、少し甘くて、どこまでもまっすぐ―――そんな”透明感”と”青春のような甘酸っぱさ”が魅力です。</p>
+                    </div>
+                </div>
+                <div class="group_sns">
+                    <a href="https://x.com"><span class="prof-x"><img src="img/profile_icon_X.png" alt="あおいろぱれっとのエックス"></span></a>
+                    <a href="https://www.instagram.com"><span class="prof-insta"><img src="img/profile_icon_Instagram.png" alt="あおいろぱれっとのインスタグラム"></span></a>
+                    <a href="https://www.youtube.com"><span class="prof-you"><img src="img/profile_icon_YouTube.png" alt="あおいろぱれっとのユーチューブ"></span></a>
+                    <a href="https://www.tiktok.com"><span class="prof-tik"><img src="img/profile_icon_TikTok.png" alt="あおいろぱれっとのティックトック"></span></a>
+                </div>
+            </div>
+            <div class="prof_solo">
+                <div class="palette_img">
+                    <!-- <img src="img/top_img/profile_palette_only.png" alt=" "> -->
+                </div>
+                <div class="solo_photo">
+                    <div class="solo_yuki">
+                        <a class="mo_1" href="img/yuki_pop-up.png" data-lightbox="photo01" data-title=" "><img src="img/profile_seoyuki.png" alt="せお　ゆきのアーティスト写真"></a>
+                    </div>
+                    <div class="solo_soyon">
+                        <a class="mo_1" href="img/soyon_pop-up.png" data-lightbox="photo02" data-title=" "><img src="img/profile_soyon.png" alt="まなせ　そよんのアーティスト写真"></a>
+                    </div>
+                    <div class="solo_harua">
+                        <a class="mo_1" href="img/harua_pop-up.png" data-lightbox="photo03" data-title=" "><img src="img/profile_harua.png" alt="きららざか　はるあのアーティスト写真"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- 下層ページはここから上を変える -->
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+        <a href="index.html" class="foot-logo">
+            <img src="img/aopale_logo2.png" alt="あおいろぱれっとのロゴマーク" width="238" height="32">
+        </a>
+        <ul class="footer-list">
+            <li><a href="#">出演依頼はこちら</a></li>
+            <li><a href="privacypolicy/index.html">プライバシーポリシー</a></li>
+        </ul>
+        <p class="copyright">&copy;2025 株式会社ラブクリエイト</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
