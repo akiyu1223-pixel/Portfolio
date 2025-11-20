@@ -3,6 +3,12 @@
 /* div{border: 1px solid #000;} */
 
 img{max-width: 100%;height:auto;}
+img {
+  transition: transform 0.3s ease; /* アニメーション */
+}
+img:hover {
+  transform: scale(1.05); /* 1.1倍に拡大 */
+}
 
 body{
     font-family: "Kiwi Maru", serif;
@@ -155,11 +161,20 @@ footer{
     justify-content: center;
     align-items: center;
     z-index: 2000;
+
+    a:link{text-decoration: none; color: #fff;}
+    a:visited{text-decoration: none; color: #fff;}
+    a:hover{text-decoration: none; color: #ed8fb3;}
+    a:active{text-decoration: none; color: #fff;}
 }
 .about-go img{
     margin-top: -200px;
     width: 800px;
     position: relative;
+    transition: transform 0.3s ease; /* アニメーション */
+}
+.about-go img:hover {
+  transform: scale(1.05); /* 1.1倍に拡大 */
 }
 .about-go h3{
     color: #fff;
@@ -178,7 +193,7 @@ footer{
     background-color: transparent;
     z-index: 500; */
 }
-.works{
+.top-works{
     width: 100%;
     height: auto;
 }
@@ -201,21 +216,35 @@ footer{
     color: #665447;
 }
 .sakuhin-box{
-    height: 1520px;
+    height: 1980px;
     background-image: url(../img/works-backleft.png),url(../img/works-backright.png);
     background-repeat: repeat-y;
     background-position: 3% 0 , 97% 0;
     /* background-attachment: fixed; */
 }
+
+
 .sakuhin-1{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 150px;
     margin-bottom: 200px;
+    margin-right: 25px;
 }
 .sakuhin-1 img{
-    margin-right: 60px;
+    margin-right: 50px;
+}
+
+.sakuhin-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+.sakuhin-2 img{
+    margin-right: 50px;
 }
 .ring-title{
     margin-bottom: 10px;
@@ -226,6 +255,27 @@ footer{
     margin-bottom: 30px;
     font-size: 14px;
 }
+
+
+.sakuhin-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+.sakuhin-3 img{
+    margin-left: 60px;
+}
+.miso-title{
+    margin-bottom: 10px;
+}
+.miso-3koutei{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 14px
+}
+
 .kikaku{
     border: 1.5px solid #665447;
     background-color: #fff;
@@ -264,7 +314,14 @@ footer{
     align-items: center;
 }
 
-.arrow {
+
+/* -------------------
+
+　　もっとみるの三角
+
+------------------- */
+
+/* .arrow {
   position: relative;
   display: inline-block;
   width: 25px;
@@ -285,29 +342,34 @@ footer{
   background-color: #665447;
   transform: rotate(25deg);
   transform-origin: calc(100% - 0.5px) 50%;
-}
+} */
 
-.sakuhin-2{
-    display: flex;
-    justify-content: center;
+.arrow {
+    display: inline-flex;
     align-items: center;
-    margin-bottom: 200px;
-}
-.sakuhin-2 img{
-    margin-left: 60px;
-}
-.miso-title{
-    margin-bottom: 10px;
-}
-.miso-3koutei{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-    font-size: 14px
 }
 
+.arrow::after {
+    content: "";
+    margin-left: 6px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid #665447; /* 矢印の色 */
+}
+
+/* ▼ hover 時に矢印（三角）の色を変える */
+.arrow:hover::after {
+    border-left-color: #ed8fb3;
+}
+
+
+
+.botton-oya{
+    width: 100%;
+    margin: 0 auto;
+}
 .btn-box{
-    width: 100px;
+    max-width: 180px;
     margin: 0 auto;
 }
 .all-btn{
@@ -329,6 +391,7 @@ footer{
     transition: all .2s;
     transform: scale(1.1,1.1);
 }
+
 .bottom-back{
     height: 181px;
     background-image: url(../img/works-bottomleft.png),url(../img/works-bottomright.png);
@@ -345,6 +408,12 @@ footer{
 .prof{
     background-color: #faeaf0;
     width: 100%;
+}
+.prof img {
+  transition: none
+}
+.prof img:hover {
+  transform: none
 }
 .prof-back{
     background-image: url(../img/profile-topright.png);
@@ -494,7 +563,7 @@ footer{
     font-size: 30px;
 }
 .works-haikei{
-    height: 1520px;
+    height: auto;
     background-image: url(../img/works-backleft.png),url(../img/works-backright.png);
     background-repeat: repeat-y;
     background-position: 3% 0 , 97% 0;
@@ -507,18 +576,41 @@ footer{
     margin-bottom: 150px;
 }
 .works-miso{
-    /* margin-top: 30px; */
     margin-left: 10%;
 }
 .miso-title{
     font-size: 21px;
+    margin-bottom: 10px;
 }
-.works-ring{
+/* .works-ring{
     margin-right: 10%;
 }
 .ring-title{
     font-size: 21px;
+} */
+
+.works-ring{
+    margin-left: 10%;
 }
+.ring-title{
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.works-wagashi{
+    margin-right: 10%;
+}
+.wagashi-title{
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+.wagashi-3koutei{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
 .works-chair{
     margin-right: 10%;
 }
@@ -532,6 +624,36 @@ footer{
     margin-bottom: 30px;
     font-size: 14px;
 }
+
+.works-idol{
+    margin-right: 10%;
+}
+.idol-title{
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+.idol-3koutei{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.works-xx{
+    margin-left: 10%;
+}
+.xx-title{
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+.xx-3koutei{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+
 
 .view-more2:hover{
     color: #ed8fb3;
@@ -741,6 +863,49 @@ footer{
   content: "★";   /* 文字のあとに星 */
   color: #7F5B4C;      /* 色変更OK */
 }
+.dot-before12::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #6287f5;      /* 色変更OK */
+}
+.dot-before13::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #e4f3fa;      /* 色変更OK */
+}
+.dot-before14::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #d1edff;      /* 色変更OK */
+}
+.dot-before15::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #eaacae;      /* 色変更OK */
+}
+.dot-before16::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #d8719b;      /* 色変更OK */
+}
+.dot-before17::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #fbe4b4;      /* 色変更OK */
+}
+.dot-before18::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #f6bda6;      /* 色変更OK */
+}
+.dot-before19::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #bbe0d7;      /* 色変更OK */
+}
+.dot-before20::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #81c69a;      /* 色変更OK */
+}
+.dot-before21::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #373B49;      /* 色変更OK */
+}
+
+
+
 
 
 /* ------------------
@@ -762,4 +927,11 @@ footer{
   max-height: 600px;               /* 横幅を200pxに指定 */
   border: 1px solid #e4e4e4;      /* わかりやすくボーダーを引く */
   overflow-y: auto;          /* 縦方向にスクロール可能にする */
+}
+
+.sample-box img {
+  transition: none
+}
+.sample-box img:hover {
+  transform: none
 }
