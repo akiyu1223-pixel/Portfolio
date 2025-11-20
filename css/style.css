@@ -18,7 +18,7 @@ body{
     a:link{text-decoration: none; color: #665447;}
     a:visited{text-decoration: none; color: #665447;}
     a:hover{text-decoration: none; color: #ed8fb3;}
-    a:active{text-decoration: none; color: #665447;}
+    a:active{text-decoration: none; color: #ed8fb3;}
 }
 h2{
     font-size: 30px;
@@ -391,6 +391,9 @@ footer{
     transition: all .2s;
     transform: scale(1.1,1.1);
 }
+.all-btn:active{
+    text-decoration: none; color: #ed8fb3;
+}
 
 .bottom-back{
     height: 181px;
@@ -433,7 +436,7 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    color: #ecadc5;
+    color: #665447;
     margin-top: -250px;
 }
 
@@ -553,7 +556,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ecadc5;
+    color: #665447;
     /* margin-top: -100px; */
     margin-bottom: 200px;
     padding-top: 220px;
@@ -658,6 +661,9 @@ footer{
 .view-more2:hover{
     color: #ed8fb3;
 }
+.view-more2:active{
+    color: #ed8fb3;
+}
 .view-more2{
     /* margin-left: 330px; */
     font-size: 16px;
@@ -750,7 +756,7 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    color: #ecadc5;
+    color: #665447;
     margin-top: -250px;
     margin-bottom: 70px;
 }
