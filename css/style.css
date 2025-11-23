@@ -909,6 +909,26 @@ footer{
   content: "★";   /* 文字のあとに星 */
   color: #373B49;      /* 色変更OK */
 }
+.dot-before22::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #fbecd7;      /* 色変更OK */
+}
+.dot-before23::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #d195ac;      /* 色変更OK */
+}
+.dot-before24::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #659a9b;      /* 色変更OK */
+}
+.dot-before25::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #bd982f;      /* 色変更OK */
+}
+.dot-before26::before {
+  content: "★";   /* 文字のあとに星 */
+  color: #101010;      /* 色変更OK */
+}
 
 
 
@@ -929,15 +949,27 @@ footer{
     margin-bottom: 100px;
 }
 .sample-box {
-  max-width: 900px;                /* 横幅を200pxに指定 */
-  max-height: 600px;               /* 横幅を200pxに指定 */
-  border: 1px solid #e4e4e4;      /* わかりやすくボーダーを引く */
-  overflow-y: auto;          /* 縦方向にスクロール可能にする */
+    max-width: 900px;                /* 横幅を200pxに指定 */
+    max-height: 600px;               /* 横幅を200pxに指定 */
+    border: 1px solid #e4e4e4;      /* わかりやすくボーダーを引く */
+    overflow-y: auto;          /* 縦方向にスクロール可能にする */
 }
 
 .sample-box img {
-  transition: none
+    transition: none
 }
 .sample-box img:hover {
-  transform: none
+    transform: none
+}
+
+.sample-box2 {
+    max-width: 900px;                /* 横幅を200pxに指定 */
+    max-height: 600px;               /* 横幅を200pxに指定 */
+    border: 1px solid #e4e4e4;      /* わかりやすくボーダーを引く */
+}
+.sample-box2 img {
+    transition: none
+}
+.sample-box2 img:hover {
+    transform: none
 }
