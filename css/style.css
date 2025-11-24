@@ -183,15 +183,26 @@ footer{
     margin-top: -240px;
     position: absolute;
 }
+.kochira{
+    a:link{text-decoration: none; color: #ed8fb3;}
+    a:visited{text-decoration: none; color: #ed8fb3;}
+    a:hover{text-decoration: none; color: #ffe3ee;}
+    a:active{text-decoration: none; color: #ed8fb3;}
+}
 .uneune{
+    display: flex;
     width: 100%;
     height: 60px;
+    transition:none;
     /* background-image: url(../img/uneune.png);
     background-repeat: repeat-x;
     background-size: cover;
     background-position: center;
     background-color: transparent;
     z-index: 500; */
+}
+.uneune img:hover {
+    transform: none
 }
 .top-works{
     width: 100%;
@@ -212,11 +223,11 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 220px;
+    padding-top: 250px;
     color: #665447;
 }
 .sakuhin-box{
-    height: 1980px;
+    height: 3210px;
     background-image: url(../img/works-backleft.png),url(../img/works-backright.png);
     background-repeat: repeat-y;
     background-position: 3% 0 , 97% 0;
@@ -229,7 +240,7 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: 150px;
-    margin-bottom: 200px;
+    margin-bottom: 190px;
     margin-right: 25px;
 }
 .sakuhin-1 img{
@@ -241,7 +252,7 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: 150px;
-    margin-bottom: 200px;
+    margin-bottom: 190px;
 }
 .sakuhin-2 img{
     margin-right: 50px;
@@ -578,12 +589,18 @@ footer{
     padding: 0 200px;
     margin-bottom: 150px;
 }
-.works-miso{
+.works-idol{
     margin-left: 10%;
 }
-.miso-title{
+.idol-title{
     font-size: 21px;
     margin-bottom: 10px;
+}
+.idol-3koutei{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
 }
 /* .works-ring{
     margin-right: 10%;
@@ -628,14 +645,14 @@ footer{
     font-size: 14px;
 }
 
-.works-idol{
+.works-miso{
     margin-right: 10%;
 }
-.idol-title{
+.miso-title{
     font-size: 21px;
     margin-bottom: 10px;
 }
-.idol-3koutei{
+.miso-3koutei{
     display: flex;
     gap: 10px;
     margin-bottom: 30px;
@@ -715,7 +732,7 @@ footer{
 ----------------- */
 
 .btn-box2{
-    width: 100%;
+    width: auto;
     margin-left: 330px;
     margin-top: -80px;
     margin-bottom: 100px;
