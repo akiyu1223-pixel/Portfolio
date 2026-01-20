@@ -222,8 +222,8 @@ footer{
     font-size: 12px;
 }
 
-/* モバイルレイアウト : 400 px 以下 */
-@media only screen and (max-width: 500px) {
+/* モバイルレイアウト : 550 px 以下 */
+@media only screen and (max-width: 550px) {
   footer{
     margin-top: 50px;
   }
@@ -684,8 +684,8 @@ footer{
     border-left-color: #ffda69;
 }
 
-/* モバイルレイアウト : 400 px 以下 */
-@media only screen and (max-width: 500px) {
+/* モバイルレイアウト : 550 px 以下 */
+@media only screen and (max-width: 550px) {
   .mv-box {
     position: relative;
     width: 90%;
@@ -918,8 +918,8 @@ footer{
     /* margin-left: 230px; */
 }
 
-/* モバイルレイアウト : 400 px 以下 */
-@media only screen and (max-width: 500px) {
+/* モバイルレイアウト : 550 px 以下 */
+@media only screen and (max-width: 550px) {
   .works{
     width: 85%;
     padding: 50px 50px;
@@ -1325,8 +1325,8 @@ footer{
 
 --------------- */
 
-/* モバイルレイアウト : 400 px 以下 */
-@media only screen and (max-width: 500px) {
+/* モバイルレイアウト : 550 px 以下 */
+@media only screen and (max-width: 550px) {
   .prof-df{
     flex-direction: column;
   }
