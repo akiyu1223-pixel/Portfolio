@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!--ビューポート-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>さかい果樹園</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap" rel="stylesheet">
+<!--jQuery本体-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<!-- スライダー -->
+<script src="js/slick.min.js"></script> 
+<link href="css/slick.css" rel="stylesheet">
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+
+// メインビジュアル
+// document.addEventListener('DOMContentLoaded', () => {
+//   const slides = document.querySelectorAll('.mv-slide');
+//   if (!slides.length) return;
+
+//   let index = 0;
+//   const interval = 8000;
+
+//   setInterval(() => {
+//     slides[index].classList.remove('is-active');
+//     index = (index + 1) % slides.length;
+//     slides[index].classList.add('is-active');
+//   }, interval);
+// });
+
+// ハンバーガーメニュー
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('hamburgerMenu');
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    btn.classList.toggle('is-open');
+    menu.classList.toggle('is-open');
+  });
+
+  document.addEventListener('click', () => {
+    btn.classList.remove('is-open');
+    menu.classList.remove('is-open');
+  });
+});
+
+// ローディング
+(() => {
+  const MIN_LOADING_TIME = 800; // ← 最短0.8秒
+  const startTime = Date.now();
+
+  window.addEventListener('load', () => {
+    const loading = document.getElementById('loading');
+    const main = document.getElementById('main');
+
+    const elapsed = Date.now() - startTime;
+    const waitTime = Math.max(0, MIN_LOADING_TIME - elapsed);
+
+    // 最短時間を満たしてから実行
+    setTimeout(() => {
+
+      // りんごを開く
+      loading.classList.add('loaded');
+
+      // パカッ後にフェードアウト
+      setTimeout(() => {
+        loading.classList.add('fade-out');
+        main.classList.add('show');
+      }, 600);
+
+      // 完全削除
+      setTimeout(() => {
+        loading.remove();
+      }, 1000);
+
+    }, waitTime);
+  });
+})();
+
+
+</script>
+
+</head>
+
+<body>
+<!-- ローディング -->
+<div id="loading">
+  <div class="apple">
+    <img src="img/apple-1.png" class="apple-whole" alt=" ">
+    <img src="img/apple-2.png" class="apple-cut" alt=" ">
+    <img src="img/sakai-loading.png" class="sakai-kajuen" alt="さかい果樹園">
+
+    <!-- 果汁 -->
+    <span class="juice j1"></span>
+    <span class="juice j2"></span>
+    <span class="juice j3"></span>
+  </div>
+</div>
+
+<!-- ハンバーガーボタン -->
+<div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- メニュー -->
+<nav class="hamburger-menu" id="hamburgerMenu">
+    <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about-us/index.html">さかい果樹園</a></li>
+        <li><a href="news/index.html">おしらせ</a></li>
+        <li><a href="apple-picking/index.html">りんご狩り</a></li>
+        <li><a href="#top-access">アクセス</a></li>
+        <li class="contact"><a href="contact/index.html">お問い合わせ</a></li>
+        <!-- <li><a href="#">よくある質問</a></li> -->
+    </ul>
+    <img src="img/apple-icon.png" class="menu-apple" alt="">
+</nav>
+
+
+<!-- メインコンテンツ -->
+<main id="main">
+
+    <!-- メインビジュアル -->
+    <div class="main-visual">
+        <div class="copy-1">
+            <img src="img/catchcopy-1.png" alt="笑顔咲く、りんご狩りのひととき。" width="142" height="1589">
+        </div>
+        <div class="mv-img">
+            <div class="mv">
+                <div class="mv-slide is-active" style="background-image:url(img/couple-mv.png)"></div>
+                <div class="mv-slide" style="background-image:url(img/apple-mv.png)"></div>
+                <div class="mv-slide" style="background-image:url(img/oyako-mv.png)"></div>
+                <div class="mv-slide" style="background-image:url(img/basket-apple-mv.png)"></div>
+            </div>  
+        </div>
+        <div class="copy-2">
+            <img src="img/catchcopy-2.png" alt="自然の恵み、手のひらに。" width="146" height="2195">
+        </div>
+    </div>
+    <div class="sakaikajuen">
+        <img src="img/sakai-apple-logo1.png" alt="さかい果樹園" width="5760" height="642">
+    </div>
+
+    <div class="scroll">
+        <div class="yohaku-1">
+        <div class="scroll-indicator">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <p>SCROLL</p>
+        </div>
+        <div class="yohaku-2">
+    </div>
+
+    <div class="sec-1">
+        <div class="main-setumei">
+            <div class="main-txt">
+                <h3>美しい山の麓に広がる、自然豊かな「さかい果樹園」。<br>ここはまるで絵本の中の世界のような、のどかな風景が広がっています。<br>四季折々の変化が楽しめるこの場所では、秋になると、太陽の恵みをたっぷり浴びた真っ赤で甘いりんごが実をつけます。<br>まるで宝石のように輝くりんごたちが、風に揺れる木々の間から顔を覗かせて、思わず手を伸ばしたくなること間違いなし！</h3>
+            </div>
+            <div class="main-img">
+                <img src="img/setumei-apple1.png" alt="りんご" width="2061" height="1788">
+            </div>
+        </div>
+        <a href="about-us/index.html"><div class="btn-box1">
+            <p class="button-1">さかい果樹園について</p>
+        </div></a>
+    </div>
+
+    <div class="kirikae">
+        <img src="img/mokomoko.png" alt=" " width="5760" height="231">
+    </div>
+
+    <div class="sec-2">
+        <div class="oshirase">
+            <div class="title-btn">
+                <div class="title-1">
+                    <h2>おしらせ</h2>
+                </div>
+                <a href="news/index.html"><div class="btn-box2">
+                    <p class="button-2">おしらせ一覧</p>
+                    
+                </div></a>
+            </div>
+            <a href="news-syousai/index.html"><div class="oshirase-box-1">
+                <div class="oshirase-txt">
+                    <p class="koushinbi">2025/11/11</p>
+                    <p class="naiyou">令和7年のりんご狩りは12月5日をもちまして終了いたします</p>
+                </div>
+            </div></a>
+            <a href="news-syousai/index.html"><div class="oshirase-box-2">
+                <div class="oshirase-txt">
+                    <p class="koushinbi">2025/09/20</p>
+                    <p class="naiyou">さかい果樹園にご来園のお客さまへ</p>
+                </div>
+            </div></a>
+            <a href="news-syousai/index.html"><div class="oshirase-box-3">
+                <div class="oshirase-txt">
+                    <p class="koushinbi">2025/09/10</p>
+                    <p class="naiyou">9月25日より令和7年のりんご狩りが開始いたします</p>
+                </div>
+            </div></a>
+        </div>    
+    </div>
+
+    <div class="sec-3">
+        <div class="ringo-gari">
+            <h2>さかい果樹園のりんご狩り</h2>
+        </div>
+        <div class="ringo-setumei">
+            <div class="ringo-txt">
+                <p>「さかい果樹園」では、毎年恒例のりんご狩りが大人気。<br>家族や友人と一緒に、笑顔が溢れるひとときを過ごすことができます。<br>木の上に実った一番おいしそうなりんごを見つけて、手に取るその瞬間。果実の甘い香りが広がり、口に入れるとフレッシュなジューシーさが広がります。<br>太陽がサンサンと降り注ぎ、空気が清々しいこの場所で、心も体も元気をもらえることでしょう。<br>秋の風物詩、りんご狩りを楽しみながら、自然の恵みを存分に感じてください。</p>
+            </div>
+            <div class="ringo-img">
+                <img src="img/ringogari-img.png" alt="りんごを収穫する男の子" width="2061" height="1848">
+            </div>
+        </div>
+        <a href="apple-picking/index.html"><div class="btn-box3">
+            <p class="button-3">りんご狩りについて</p>
+        </div></a>
+        <div class="kirikae" id="top-access">
+            <img src="img/mokomoko-usu.png" alt=" " width="5760" height="231">
+        </div>
+    </div>
+
+    <div class="sec-4">
+        <div class="access-title">
+            <h2>アクセス</h2>
+        </div>
+        <div class="access-setumei">
+            <div class="access-txt">
+                <h2>さかい果樹園</h2>
+                <h3>Tel<span class="tel"></span>0172-0000-1234</h3>
+                <p>〒036-1333 青森県弘前市鳥井野123<br>休園日<span class="kyuuenbi">毎週金曜日</span><br>営業時間<span class="eigyojikan">10:00～17:00</span><br><br>大秋・居森平線（田代経由）<br>バスターミナル7番<br>鳥井野下車 ‐ 徒歩15分</p>
+                <a href="https://maps.app.goo.gl/NJe8KwFYFTGefoXt5" target="_blank"><div class="btn-box4">
+                    <p class="button-4">Google mapをみる</p>
+                </div></a>
+            </div>
+            <div class="access-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3029.314710955292!2d140.4144305!3d40.6008796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9afe352e8cba49%3A0x91bd25f1df330ef!2z44CSMDM2LTEzMzMg6Z2S5qOu55yM5byY5YmN5biC6bOl5LqV6YeOIOOCouODg-ODl-ODq-ODreODvOODiQ!5e0!3m2!1sja!2sjp!4v1765315641405!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="kirikae">
+        <img src="img/mokomoko.png" alt=" " width="5760" height="231">
+    </div>
+    <footer>
+        <div class="foot-menu">
+            <div class="foot-left">
+                <div class="foot-box1">
+                    <a href="index.html"><div class="foot-logo">
+                        <img src="img/sakai-loading.png" alt="さかい果樹園のロゴマーク" width="200">
+                    </div></a>
+                    <div class="foot-txt">
+                        <div class="foot-tel">
+                            <p>Tel<span class="tel2"></span>0172-0000-1234</p>
+                            <p>Fax<span class="tel"></span>0172-0000-5678</p>
+                        </div>
+                    </div>
+                    <div class="footer-info">
+                        <div><p>〒036-1333</p></div>
+                        <div><p>青森県弘前市鳥井野123</p></div>
+                        <div><p>休園日<span class="foot-kyuuenbi">毎週金曜日</p></div>
+                        <div><p>営業時間<span class="foot-eigyojikan">10:00～17:00</p></div>
+                    </div>
+                </div>
+                <div class="copy-light">
+                    <p>&copy;2025 株式会社さかい果樹園</p>
+                </div>
+            </div>
+            <div class="foot-right">
+                <div class="menu-1">
+                    <a href="about-us/index.html"><p>さかい果樹園</p></a>
+                    <a href="news/index.html"><p>おしらせ</p></a>
+                    <a href="apple-picking/index.html"><p>りんご狩り</p></a>
+                </div>
+                <div class="menu-2">
+                    <a href="#top-access"><p>アクセス</p></a>
+                    <a href="contact/index.html"><p>お問い合わせ</p></a>
+                    <a href="privacy-policy/index.html"><p>プライバシーポリシー</p></a>
+                </div>
+            </div>
+        </div>
+        <wrapper class="wrapper">
+            <div class="foot">
+                <div class="footer-apple-wrap">
+                    <img src="img/apple-icon.png" alt="りんご" class="footer-apple">
+                </div>
+                <!-- スライダー -->
+                <div class="slider">
+                    <div><img src="img/slider-cut-apple-2.png" alt="カットされたりんごを持つこども" width="3072" height="2184"/></div>
+                    <div><img src="img/slider-syuugou-1.png" alt="さかい果樹園の代表とこどもたち" width="3072" height="2184"/></div>
+                    <div><img src="img/slider-syuugou-2.png" alt="さかい果樹園の代表とこどもたち" width="3072" height="2184"/></div>
+                    <div><img src="img/slider-apple-farmer-1.png" alt="さかい果樹園の代表" width="3072" height="2184"/></div>
+                    <div><img src="img/slider-apple-farmer-2.png" alt="りんごを磨く代表" width="3072" height="2184"/></div>
+                    <div><img src="img/slider-apple-lady.png" alt="さかい果樹園のスタッフ" width="3072" height="2184"/></div>
+                    <div><img src="img/slider-eat-apple.png" alt="収穫したりんごをかじるこども" width="3072" height="2184"/></div>
+                    <div><img src="img/slider-family-2.png" alt="収穫したりんごを食べている家族" width="3072" height="2184"/></div>
+                    <div><img src="img/slider-basket-apple.png" alt="カゴに入っているたくさんのりんご" width="3072" height="2184"/></div>
+                    <div><img src="img/slider-cut-apple-1.png" alt="カットされたりんご" width="3072" height="2184"/></div>                 
+                </div>
+            </div>
+        </wrapper>
+
+</footer>
+</main>
+
+<!-- footerの転がるりんご -->
+<script>
+const apple = document.querySelector('.footer-apple');
+const footer = document.querySelector('footer');
+
+let isRolling = false;
+
+/* りんごを流す関数 */
+function rollApple() {
+  if (isRolling) return;
+
+  isRolling = true;
+  apple.classList.remove('is-roll');
+  void apple.offsetWidth;
+  apple.classList.add('is-roll');
+}
+
+/* フッター表示をトリガー */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !isRolling) {
+      rollApple();
+    }
+  });
+});
+
+observer.observe(footer);
+
+/* アニメーション終了後の処理 */
+apple.addEventListener('animationend', () => {
+  apple.classList.remove('is-roll');
+  isRolling = false;
+
+  // 消えてから18秒後にまた流す
+  setTimeout(() => {
+    rollApple();
+  }, 18000);
+});
+</script>
+
+<!-- メインビジュアル js -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.mv-slide');
+  if (!slides.length) return;
+
+  let index = 0;
+  const interval = 4500;
+
+  setInterval(() => {
+    slides[index].classList.remove('is-active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('is-active');
+  }, interval);
+});
+</script>
+
+<!-- スライダー -->
+<script>
+$(function(){
+    $('.slider').slick({
+        autoplay: true, // 自動でスクロール
+        autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
+        speed: 5000, // スライドが流れる速度を設定
+        cssEase: "linear", // スライドの流れ方を等速に設定
+        slidesToShow: 6, // 表示するスライドの数
+        swipe: false, // 操作による切り替えはさせない
+        arrows: false, // 矢印非表示
+        pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
+        pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
+        responsive: [
+        {
+            breakpoint: 750,
+            settings: {
+            slidesToShow: 3, // 画面幅750px以下でスライド3枚表示
+            }
+        }
+        ]
+    });
+});
+</script>
+
+
+</body>
+
+</html>

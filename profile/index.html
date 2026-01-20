@@ -2,14 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<!--ビューポート-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" contact="noindex,nofollow">
-<title>Portfolio - profile</title>
+<title>【改正】Portfolio - top</title>
 <link href="../css/reset.css" rel="stylesheet">
 <link href="../css/style.css" rel="stylesheet">
 <!--jQuery本体-->
 <script src="../js/jquery-1.11.2.min.js"></script>
-
 <!-- フォント -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,90 +25,162 @@ $(function(){
 </head>
 
 <body>
+<!-- 背景 -->
+<div class="bg_pattern Polka_v2"></div>
+<!-- <div class="section">
+  <div class="_a"><a href="https://125naroom.com/web/3737" target="_blank">【CSS】Background Patterns / Polka v2</a></div>
+</div> -->
 
-    <header class="box-1">
-        <div class="box-2">
-            <div class="box-3">
-                <a href="../index.html"><p>トップ<br><span class="ko-txt">top</span></p></a>
-                <a href="index.html"><p>わたしについて<br><span class="ko-txt">about</span></p></a>
-                <a href="../works-all/index.html"><p>制作したもの<br><span class="ko-txt">works</span></p></a>
-            </div>
-        </div>
-    </header>
+<!-- ヘッダー -->
+<header class="box-1">
+  <div class="box-2">
+    <a href="../index.html" class="head-menu">
+      <p>トップ<br><span class="ko-txt">top</span></p>
+    </a>
+    <a href="index.html" class="head-menu">
+      <p>わたしについて<br><span class="ko-txt">about</span></p>
+    </a>
+    <a href="../index.html#works" class="head-menu2">
+      <p>制作したもの<br><span class="ko-txt">works</span></p>
+    </a>
+  </div>
+</header>
 
-<!--   ↑↑↑　ヘッダーここまで　↑↑↑ -->
-<div class="prof">
-    
-    <div class="prof-back">
-        <div class="head-shadow"></div>
-        <div class="prof-title">
-            <h2>わたしについて</h2>
+<!-- 下層はここから下を変える -->
+
+  <main>
+    <div class="prof"> 
+      <div class="prof-back">
+          <div class="prof-title">
+              <h1>わたしについて</h1>
+          </div>
+      </div>
+      <main class="prof-main">
+        <div class="prof-df">
+          <div class="prof-img"><img src="../img/profile-img.png" alt=" "></div>
+          <div class="prof-txtbox">
+              <div class="prof-name">
+                  <img src="../img/profile-name.png" alt=" ">
+                  <p class="me-name">おぐり ゆきえ<span class="desu">です！</span></p>
+              </div>
+              <div class="me-setumei">
+                <p>前職は観光施設の運営スタッフとして勤務していました。<br>学生時代美術部に所属していたことから、施設内で季節やイベントに合わせて展示する作品のデザインに携わらせていただいたことがきっかけで、Webデザイナー・グラフィックデザイナー職を目指すようになり、2025年6月より半年間、職業訓練校にてデザインについて学びました。</p>
+              </div>
+          </div>
         </div>
-    </div>
-    <main class="prof-main">
-        <div class="prof-img"><img src="../img/profile-img.png" alt=" "></div>
-        <div class="prof-txtbox">
-            <div class="prof-name">
-                <img src="../img/profile-name.png" alt=" ">
-                <p class="me-name">おぐり ゆきえ<span class="desu">です！</span></p>
-            </div>
-            <div class="prof-txt">
-                <div class="seinengappi">
-                    <p>2001/01/26　東京都出身</p>
+          <div class="subbox">
+
+            <div class="skills">
+                  <h2 class="skills-title">SKILLS</h2>
+                  <div class="skills-img">
+                      <div class="skills-box">
+                        <img src="../img/icon-illustrator.png" alt=" " width="65">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                      <div class="skills-box">
+                        <img src="../img/icon-indesign.png" alt=" " width="65">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle2"></div>
+                        <div class="circle2"></div>
+                      </div>
+                      <div class="skills-box">
+                        <img src="../img/icon-photoshop.png" alt=" " width="65">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                      <div class="skills-box">
+                        <img src="../img/icon-figma.png" alt=" " width="65">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle2"></div>
+                      </div>
+                      <div class="skills-box">
+                        <img src="../img/icon-vscord.png" alt=" " width="65">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                      <div class="skills-box">
+                        <img src="../img/icon-jquery.png" alt=" " width="65">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle2"></div>
+                      </div>
+                      <div class="skills-box">
+                        <img src="../img/icon-html.png" alt=" " width="65">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                      <div class="skills-box">
+                        <img src="../img/icon-css.png" alt=" " width="65">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                  </div>
+                  <div class="skills-setumei">
+                    <p>jQueryやFigmaは、より使いこなせるようになるために現在勉強中です！</p>
+                  </div>
+
                 </div>
-                <div class="prof-like">
-                    <h3>好きなもの</h3>
-                </div>
-                <div class="like-box">
-                    <div class="likebox-1">
-                        <div class="like1">
-                            <p>#カメラ</p>
-                            <p>#動物</p>
+
+                <div class="prof-txt">
+                  <div class="prof-like">
+                      <h3>生年月日/出身地</h3>
+                  </div>
+                    <div class="seinengappi">
+                        <p>2001/01/26　東京都出身</p>
+                    </div>
+                    <div class="prof-like">
+                        <h3>好きなもの</h3>
+                    </div>
+                    <div class="like-box">
+                        <div class="likebox-1">
+                            <div class="like1">
+                                <p>#カメラ</p>
+                                <p>#動物</p>
+                            </div>
+                            <div class="like2">
+                                <p>#画像・動画編集</p>
+                                <p>#かわいいもの</p>
+                            </div>
+                            <div class="like3">
+                                <p>#温泉</p>
+                                <p>#焼肉</p>
+                            </div>
                         </div>
-                        <div class="like2">
-                            <p>#画像・動画編集</p>
-                            <p>#王道アイドル</p>
-                        </div>
-                        <div class="like3">
-                            <p>#温泉</p>
-                            <p>#焼肉</p>
+                        <div class="likebox-2">
+                            <div class="like4">
+                                <p>#13歳の犬と暮らしています</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="likebox-2">
-                        <div class="like4">
-                            <p>#かわいいものをつくること</p>
-                        </div>
+                    <div class="prof-seikaku">
+                        <h3>性格</h3>
                     </div>
+                    <ul class="seikaku-box">
+                        <li>新しいことを学ぶことが好き</li>
+                        <li>好奇心旺盛でトレンドの情報収集が好き</li>
+                        <li>周りからは、努力家・責任感が強いと言われます</li>
+                    </ul>
                 </div>
-                <div class="prof-seikaku">
-                    <h3>性格</h3>
-                </div>
-                <ul class="seikaku-box">
-                    <li>新しいことを学ぶことが好き</li>
-                    <li>好奇心旺盛</li>
-                    <li>周りからは、努力家・責任感が強いとよく言われる</li>
-                </ul>
-            </div>
-        </div>
-    </main>
-    <div class="prof-uneune">
-            <img src="../img/uneune.png" alt=" ">
+          </div>
     </div>
-    <main class="skills">
-        <h2 class="skills-title">SKILLS</h2>
-        <div class="skills-img">
-            <img src="../img/profile-skills.png" alt=" " width="960" height="372">
-        </div>
-        <div class="skills-txt">
-            <p>幅広いデザインを作ることができますが、その中でもかわいいデザインが得意です。</p>
-            <p>jQueryやFigmaは、より使いこなせるようになるために現在勉強中です！</p>
-        </div>
-    </main>
+  </main>
 
-</div>
-
-
-<!-- ↓↓↓　フッターここまで　↓↓↓ -->
+<!-- フッター -->
 <footer>
     <div class="foot-txt">
         <div class="foot-ko1">
@@ -116,7 +188,7 @@ $(function(){
             <p>/</p>
             <a href="index.html"><p>わたしについて</p></a>
             <p>/</p>
-            <a href="../works-all/index.html"><p>制作したもの</p></a>
+            <a href="../index.html#works"><p>制作したもの</p></a>
         </div>
         <div class="foot-ko2">
             <p>&copy; 2025 OGURI YUKIE</p>

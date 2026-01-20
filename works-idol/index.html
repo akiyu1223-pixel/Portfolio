@@ -2,14 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<!--ビューポート-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" contact="noindex,nofollow">
-<title>Portfolio - アイドルグループ公式サイト</title>
+<title>【改正】Portfolio - top</title>
 <link href="../css/reset.css" rel="stylesheet">
 <link href="../css/style.css" rel="stylesheet">
 <!--jQuery本体-->
 <script src="../js/jquery-1.11.2.min.js"></script>
-
 <!-- フォント -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,34 +25,46 @@ $(function(){
 </head>
 
 <body>
+<!-- 背景 -->
+<div class="bg_pattern Polka_v2"></div>
+<!-- <div class="section">
+  <div class="_a"><a href="https://125naroom.com/web/3737" target="_blank">【CSS】Background Patterns / Polka v2</a></div>
+</div> -->
 
-    <header class="box-1">
-        <div class="box-2">
-            <div class="box-3">
-                <a href="../index.html"><p>トップ<br><span class="ko-txt">top</span></p></a>
-                <a href="../profile/index.html"><p>わたしについて<br><span class="ko-txt">about</span></p></a>
-                <a href="../works-all/index.html"><p>制作したもの<br><span class="ko-txt">works</span></p></a>
-            </div>
-        </div>
-    </header>
+<!-- ヘッダー -->
+<header class="box-1">
+  <div class="box-2">
+    <a href="../index.html" class="head-menu">
+      <p>トップ<br><span class="ko-txt">top</span></p>
+    </a>
+    <a href="../profile/index.html" class="head-menu">
+      <p>わたしについて<br><span class="ko-txt">about</span></p>
+    </a>
+    <a href="../index.html#works" class="head-menu2">
+      <p>制作したもの<br><span class="ko-txt">works</span></p>
+    </a>
+  </div>
+</header>
 
-<!--   ↑↑↑　ヘッダーここまで　↑↑↑ -->
-<div class="works">
-    <div class="web-back">
-        <div class="head-shadow"></div>
-        <h2 class="web-title">アイドルグループ公式サイト</h2>
-    </div>
-    <div class="web-box">
-        <div class="web-txt">
-            <p>3人組ガールズアイドルグループ　あおいろぱれっと様（架空）の公式サイトを制作しました。</p>
-            <p>「王道アイドルらしいかわいさ」をコンセプトに、やわらかい色合いでかわいい雰囲気になるようにデザインしています。</p>
-        </div>
-        </div>
+<!-- 下層はここから下を変える -->
+
+  <main>
+    <div class="works">
+      <div class="web-back">
+          <div class="head-shadow"></div>
+          <h2 class="web-title">アイドルグループ公式サイト</h2>
+      </div>
+      <div class="web-box">
+          <div class="web-txt">
+              <p>3人組ガールズアイドルグループ　あおいろぱれっと様（架空）の公式サイトを制作しました。</p>
+              <p>「王道アイドルらしいかわいさ」をコンセプトに、やわらかい色合いでかわいい雰囲気になるようにデザインしています。</p>
+          </div>
+      </div>
     
 
         <div class="sample-oya">
             <div class="sample-box">
-                <img src="../img/works-idol-full.png" alt=" " width="2560" height="7336">
+                <img src="../img/idol-full.png" alt=" " width="2560" height="7336">
             </div>
         </div>
         <div class="btn-box2">
@@ -91,18 +103,12 @@ $(function(){
                     <p>Figma<br>HTML/CSS/jQuery（Visual Studio Codeを使用）</p>
                 </div>
             </div> -->
-            <div class="yohaku"></div>
-        </div>
-
     </div>
 
-    <main class="works-main">
-    </main>
-
-</div>
+  </main>
 
 
-<!-- ↓↓↓　フッターここまで　↓↓↓ -->
+<!-- フッター -->
 <footer>
     <div class="foot-txt">
         <div class="foot-ko1">
@@ -110,7 +116,7 @@ $(function(){
             <p>/</p>
             <a href="../profile/index.html"><p>わたしについて</p></a>
             <p>/</p>
-            <a href="../works-all/index.html"><p>制作したもの</p></a>
+            <a href="../index.html#works"><p>制作したもの</p></a>
         </div>
         <div class="foot-ko2">
             <p>&copy; 2025 OGURI YUKIE</p>

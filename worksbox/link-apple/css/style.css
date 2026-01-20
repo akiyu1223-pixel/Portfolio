@@ -1,0 +1,1630 @@
+@charset "utf-8";
+img{max-width: 100%;height:auto;}
+
+body{
+    background-color: #FFFAD8;
+        /* background-color: #f00; */
+    a:link{text-decoration: none; color: #91743E;}
+    a:visited{text-decoration: none; color: #91743E;}
+    a:hover{text-decoration: none; color: #D7BC8A;}
+    a:active{text-decoration: none; color: #D7BC8A;}
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+/*フォントの設定*/
+html {
+    font-family: "Kaisei Opti", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #91743E;
+    font-size: 62.5%; /* 16px × 0.625 = 10px */
+}
+
+:root {
+  /* スマホ～PCまで自然に伸縮する設定 */
+    --h1-size: clamp(2.4rem, 5vw, 3.6rem); /* 24px〜36px */
+    --h2-size: clamp(1.8rem, 3.5vw, 2.4rem); /* 18px〜24px */
+    --h3-size: clamp(1.6rem, 3vw, 1.8rem); /* 16px〜18px */
+    --ul-size:clamp(1.4rem, 2.5vw, 1.6rem); /* 14px〜16px */
+    --li-size:clamp(1.4rem, 2.5vw, 1.6rem); /* 14px〜16px */
+    --p-size: clamp(1.4rem, 2.5vw, 1.6rem); /* 14px〜16px */
+    --max-width: 1200px
+}
+    h1 {
+        font-size: var(--h1-size);
+    }
+
+    h2 {
+        font-size: var(--h2-size);
+    }
+
+    h3 {
+        font-size: var(--h3-size);
+    }
+
+    ul{
+      font-size: var(--ul-size);
+    }
+
+    li{
+      font-size: var(--li-size);
+    }
+
+    p {
+        font-size: var(--p-size);
+    }
+
+/* ===============================
+   基本文字色
+================================ */
+body {
+  color: #91743E;
+}
+
+/* ===============================
+   ローディング全体
+================================ */
+#loading {
+  position: fixed;
+  inset: 0;
+  background: #FFFAD8;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================
+   りんご
+================================ */
+.apple {
+  position: relative;
+  width: 180px;
+  height: 180px;
+
+  /* ふわふわ */
+  animation: apple-float 2.8s ease-in-out infinite;
+}
+
+/* ふわふわアニメーション */
+@keyframes apple-float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.apple img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  transition: all .6s ease;
+}
+
+.sakai-kajuen{
+    margin-top: 100%;
+}
+
+/* 初期状態 */
+.apple-cut {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+/* ===============================
+   パカッ演出
+================================ */
+#loading.loaded .apple {
+  animation: none; /* 開く瞬間は止める */
+}
+
+#loading.loaded .apple-whole {
+  opacity: 0;
+  transform: scale(1.1) rotate(-8deg);
+}
+
+#loading.loaded .apple-cut {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===============================
+   フェードアウト
+================================ */
+#loading.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
+
+/* ===============================
+   メイン表示
+================================ */
+#main {
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+#main.show {
+  opacity: 1;
+}
+
+/* ===============================
+   スマホ対応
+================================ */
+@media (max-width: 768px) {
+  .apple {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ===============================
+   果汁の粒
+================================ */
+.juice {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #FFD966; /* ほんのり果汁色 */
+  border-radius: 50%;
+
+  opacity: 0;
+  transform: translate(0, 0) scale(0.6);
+}
+
+/* 初期位置（中心付近） */
+.j1 { top: 40%; left: 30%; }
+.j2 { top: 42%; left: 28%; }
+.j3 { top: 38%; left: 32%; }
+
+/* ===============================
+   パカッ同時に果汁ピュッ
+================================ */
+#loading.loaded .juice {
+  animation: juice-splash .6s ease-out forwards;
+}
+
+/* 粒ごとに少しズラす */
+#loading.loaded .j1 { animation-delay: 0s; }
+#loading.loaded .j2 { animation-delay: .05s; }
+#loading.loaded .j3 { animation-delay: .1s; }
+
+@keyframes juice-splash {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.6);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-20px, -25px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-28px, -35px) scale(0.8);
+  }
+}
+
+.juice {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    #fff,
+    #ffdb70 40%,
+     #ffcd42 70%
+  );
+
+  opacity: 0;
+  transform: translate(0, 0) scale(0.6);
+  filter: brightness(1);
+}
+
+#loading.loaded .juice {
+  animation:
+    juice-splash .6s ease-out forwards,
+    juice-glint .2s ease-out both;
+}
+
+#loading.loaded .j1 { animation-delay: 0s, 0s; }
+#loading.loaded .j2 { animation-delay: .05s, .05s; }
+#loading.loaded .j3 { animation-delay: .1s, .1s; }
+
+@keyframes juice-splash {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.6);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-20px, -25px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-28px, -35px) scale(0.8);
+  }
+}
+
+@keyframes juice-glint {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.8);
+  }
+  100% {
+    filter: brightness(1.4);
+    /* filter: brightness(1); */
+  }
+}
+
+/* (キラをもっと控えめに) */
+
+/* ===============================
+   ハンバーガーボタン
+================================ */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+
+  width: 36px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #91743E;
+  border-radius: 2px;
+  margin: 6px 0;
+}
+
+/* ===============================
+   メニュー本体
+================================ */
+.hamburger-menu {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+
+  width: 220px;
+  padding: 20px;
+
+  background: #EEF4C9; /* 淡い薄黄緑 */
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
+  pointer-events: none;
+
+  transition: all .3s ease;
+}
+
+/* 表示時 */
+.hamburger-menu.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* ×に変形 */
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.hamburger span {
+  transition: all .3s ease;
+}
+
+
+/* ===============================
+   メニュー中身
+================================ */
+.hamburger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-menu li {
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.hamburger-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.hamburger-menu a {
+    color: #91743E;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.hamburger-menu .contact a {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #F25959;
+    background-color: #F25959;
+    border-radius: 80px;
+    padding: 10px 16px;
+    color: #fff;
+}
+.hamburger-menu .contact a:hover{
+    border: 2px solid #FFBCAB;
+    background-color: #FFFEF6;
+    color: #FFBCAB;
+    transition: all .2s;
+    transform: scale(1.1,1.1);
+}
+.hamburger-menu .contact a:active{
+    text-decoration: none; color: #FFFEF6;
+}
+
+
+.menu-apple {
+  position: absolute;
+  bottom: -12px;
+  right: -8px;
+
+  width: 42px;
+  transform: rotate(-6deg);
+
+  pointer-events: none;
+}
+
+@keyframes apple-bounce {
+  0%   { transform: translateY(0) rotate(-6deg); }
+  30%  { transform: translateY(-6px) rotate(-3deg); }
+  55%  { transform: translateY(0) rotate(-6deg); }
+  75%  { transform: translateY(-3px) rotate(-5deg); }
+  100% { transform: translateY(0) rotate(-6deg); }
+}
+
+.hamburger-menu.is-open .menu-apple {
+  animation: apple-bounce .45s ease-out;
+}
+
+@keyframes apple-sink {
+  0%   { transform: translateY(0) rotate(-6deg); }
+  100% { transform: translateY(3px) rotate(-6deg); }
+}
+
+/* メニュー閉じた瞬間だけ沈む */
+.hamburger-menu:not(.is-open) .menu-apple {
+  animation: apple-sink .2s ease-in forwards;
+}
+
+/* りんごの「影」を作る */
+.menu-apple::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+
+  width: 60%;
+  height: 10px;
+
+  background: rgba(145,116,62,.25); /* #91743E 系の影 */
+  border-radius: 50%;
+
+  transform: translateX(-50%);
+  filter: blur(4px);
+
+  transition: all .3s ease;
+}
+
+/* 跳ねた時：影が薄く・小さく */
+.hamburger-menu.is-open .menu-apple::after {
+  opacity: .5;
+  transform: translateX(-50%) scale(0.8);
+}
+
+/* 沈んだ時：影が濃く・大きく */
+.hamburger-menu:not(.is-open) .menu-apple::after {
+  opacity: .9;
+  transform: translateX(-50%) scale(1);
+}
+
+/* りんごをホバーで1°だけ傾かせる */
+.menu-apple {
+  transition: transform .2s ease; /* なめらか */
+}
+
+/* マウスホバー時だけ、1° */
+.hamburger-menu.is-open .menu-apple:hover {
+  transform: rotate(-5deg); /* 元が -6deg → +1° */
+}
+
+/* アクセシビリティ配慮 */
+@media (prefers-reduced-motion: reduce) {
+
+  .menu-apple {
+    animation: none !important;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    width: 190px;
+    padding: 16px;
+  }
+
+  .hamburger-menu a {
+    font-size: 14px;
+  }
+
+  .menu-apple {
+    width: 34px;
+    bottom: -10px;
+    right: -6px;
+  }
+}
+
+
+
+/* メインコンテンツ */
+
+.main-visual{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    background-color: #FFF2A1;
+}
+.copy-1{
+    width: 15%;
+    /* margin-left: 30px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copy-1 img{
+    width: 30px;
+}
+.copy-2{
+    width: 15%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.copy-2 img{
+    width: 30px;
+}
+
+
+/* メインビジュアル */
+.mv-img{
+    width: 70%;
+}
+
+.mv {
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.mv-slide {
+    position: absolute;
+    z-index: 99;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+    transition: opacity 2.5s ease-in-out;
+}
+
+/* 表示中 */
+.mv-slide.is-active {
+    opacity: 1;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+    .mv {
+        height: 60vh;
+        min-height: 360px;
+    }
+}
+
+/* さかい果樹園について */
+.sakaikajuen{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: -74px; */
+    margin-top: -5%;
+    position: absolute;
+    z-index: 999;
+}
+
+.yohaku-1{
+    height: 250px;
+}
+
+
+/* スクロールのマーク */
+.scroll{
+    position: relative;
+}
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  text-align: center;
+
+  color: #91743E;
+  font-family: "Kaisei Opti", sans-serif;
+  letter-spacing: .18em;
+  font-size: 12px;
+}
+
+.scroll-indicator p {
+  margin-top: 21px;
+  animation: scrollTextFloat 3s ease-in-out infinite;
+}
+
+@keyframes scrollTextFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(0.5px); }
+  100% { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator p {
+    animation: none;
+  }
+}
+
+
+/* 点 */
+.scroll-indicator .dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 14px auto;
+
+  background: #91743E;
+  border-radius: 50%;
+  opacity: 0;
+
+  animation: scrollDot 3.6s infinite;
+}
+
+/* 時差で流れる */
+.scroll-indicator .dot:nth-child(1) { animation-delay: 0s; }
+.scroll-indicator .dot:nth-child(2) { animation-delay: .3s; }
+.scroll-indicator .dot:nth-child(3) { animation-delay: .6s; }
+
+@keyframes scrollDot {
+  0%   { opacity: 0; transform: translateY(-6px); }
+  30%  { opacity: 1; }
+  60%  { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    bottom: 16px;
+    font-size: 11px;
+  }
+
+  .scroll-indicator .dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator .dot {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.yohaku-2{
+    height: 350px;
+}
+
+
+/* メッセージ */
+.main-setumei{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+.main-txt{
+    width: 50%;
+    margin-top: 8%;
+    margin-right: 10%;
+    line-height: 40px;
+}
+
+.main-img{
+    width: 50%;
+}
+
+/* さかい果樹園についてボタンここから */
+
+.btn-box1{
+    margin-left: 11%;
+    margin-bottom: 10%;
+}
+
+.button-1{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #F25959;
+    background-color: #F25959;
+    border-radius: 80px;
+    padding: 15px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-1:hover{
+    border: 2px solid #FFBCAB;
+    background-color: #FFFEF6;
+    color: #FFBCAB;
+    transition: all .2s;
+    transform: scale(1.1,1.1);
+}
+.button-1:active{
+    text-decoration: none; color: #FFBCAB;
+}
+
+/* ボタンここまで */
+
+
+.sec-2{
+    width: 100%;
+    background-color: #FFF2A1;
+    padding-top: 5%;
+}
+
+.title-btn{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1%;
+}
+/* .title-1{
+  margin-right: 2%;
+} */
+
+.oshirase{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.oshirase h2{
+    margin-bottom: 5%;
+}
+
+.oshirase-box-1{
+    width: 1200px;
+    padding: 3% 0;
+    background-color: #FFFAD8;
+    margin-bottom: 3px;
+    border-radius: 30px 30px 0 0;
+}
+.oshirase-txt{
+    display: flex;
+    margin-left: 8%;
+}
+.koushinbi{
+    margin-right: 15%;
+}
+
+.oshirase-box-2{
+    width: 1200px;
+    padding: 3% 0;
+    background-color: #FFFAD8;
+    margin-bottom: 3px;
+}
+.oshirase-box-3{
+    width: 1200px;
+    padding: 3% 0;
+    background-color: #FFFAD8;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 15%;
+}
+
+/* おしらせボタンここから */
+
+.btn-box2{
+  white-space: nowrap;
+    /* margin-left: 80%; */
+    padding-bottom: 10%;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.button-2{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #91743E;
+    background-color: #91743E;
+    border-radius: 80px;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-2:hover{
+    border: 2px solid #D7BC8A;
+    background-color: #FFFEF6;
+    color: #D7BC8A;
+    transition: all .2s;
+    transform: scale(1.1,1.1);
+}
+.button-2:active{
+    text-decoration: none; color: #D7BC8A;
+}
+
+/* ボタンここまで */
+
+.sec-3{
+    width: 100%;
+    background-color: #FFF2A1;
+    /* padding-bottom: 1%; */
+}
+
+.ringo-gari{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ringo-gari h2{
+    margin-bottom: 2%;
+}
+
+.ringo-setumei{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+.ringo-txt{
+    width: 50%;
+    /* margin-top: 8%; */
+    margin-right: 10%;
+    line-height: 40px;
+}
+
+.ringo-img{
+    width: 50%;
+    margin-top: -5%;
+}
+
+
+/* りんご狩りについてボタンここから */
+
+.btn-box3{
+    margin-left: 11%;
+    padding-bottom: 10%;
+}
+
+.button-3{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #91743E;
+    background-color: #91743E;
+    border-radius: 80px;
+    padding: 15px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-3:hover{
+    border: 2px solid #D7BC8A;
+    background-color: #FFFEF6;
+    color: #D7BC8A;
+    transition: all .2s;
+    transform: scale(1.1,1.1);
+}
+.button-3:active{
+    text-decoration: none; color: #D7BC8A;
+}
+
+/* ボタンここまで */
+
+
+.sec-4{
+    width: 100%;
+    background-color: #FFFAD8;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.access-title{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.access-title h2{
+    margin-bottom: 5%;
+}
+
+.access-setumei{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+.access-txt{
+    width: 30%;
+    /* margin-top: 8%; */
+    margin-right: 10%;
+    line-height: 40px;
+}
+
+.access-txt h2{
+    margin-bottom: 1%;
+}
+
+.access-txt h3{
+    margin-bottom: 5%;
+}
+
+.access-txt p{
+    margin-bottom: 20%;
+}
+
+.tel{
+  margin-right: 4%;
+}
+
+.access-map{
+    width: 70%;
+    height: 450px;
+    margin-top: -3%;
+    margin-bottom: 7%;
+    border: 11px solid #FFF2A1;
+    border-radius: 4%;
+}
+
+.access-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 2%;
+}
+
+.kyuuenbi{
+    margin-left: 10%;
+}
+
+.eigyojikan{
+  margin-left: 5%;
+}
+
+/* アクセスボタンここから */
+
+.btn-box4{
+    margin-bottom: 10%;
+}
+
+.button-4{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #F25959;
+    background-color: #F25959;
+    border-radius: 80px;
+    padding: 8px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-4:hover{
+    border: 2px solid #FFBCAB;
+    background-color: #FFFEF6;
+    color: #FFBCAB;
+    transition: all .2s;
+    transform: scale(1.1,1.1);
+}
+.button-4:active{
+    text-decoration: none; color: #FFBCAB;
+}
+
+/* ボタンここまで */
+
+
+
+
+footer{
+  width: 100%;
+  background-color: #FFF2A1;
+}
+
+
+/* footerの移動するりんご */
+
+.footer-apple-wrap {
+  padding-top: 5%; 
+  position: relative;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+}
+
+.footer-apple {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.15));
+}
+
+
+@keyframes apple-roll {
+  0% {
+    transform: translateX(calc(100vw + 60px));
+  }
+
+  100% {
+    transform: translateX(-60px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-apple.is-roll {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* ほんの少し上下移動 */
+/* @keyframes apple-roll {
+  0%   { transform: translateX(-60px) rotate(0deg); }
+  45%  { transform: translateX(32vw) translateY(-2px) rotate(150deg); }
+  55%  { transform: translateX(38vw) translateY(0) rotate(170deg); }
+  80%  { transform: translateX(80vw) rotate(260deg); }
+  100% { transform: translateX(calc(100vw + 60px)) rotate(320deg); }
+} */
+
+.footer-apple.is-roll {
+  opacity: 0.85;
+  animation: apple-roll 32s linear;
+}
+
+@media (max-width: 768px) {
+  .footer-apple {
+    width: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-apple.is-roll {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+
+/* スライダー */
+/* .slider{
+  margin-bottom: 5%;
+} */
+
+.slider img{
+  width: 450px;
+}
+
+/* フッター */
+
+.foot-menu{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 30px;
+  padding-top: 5%;
+  padding-bottom: 1%;
+}
+
+.foot-tel{
+  margin-right: 5%;
+  /* margin-bottom: 10%; */
+}
+
+.foot-tel p{
+  font-size: 14px;
+}
+
+.tel2{
+  margin-right: 5%;
+}
+
+.foot-logo{
+  padding-bottom: 3%;
+  padding-right: 5%;
+}
+
+.foot-kyuuenbi{
+    margin-left: 17%;
+}
+
+.foot-eigyojikan{
+  margin-left: 10%;
+}
+
+/* .foot-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.foot-box1{
+  width: 400px;
+  /* margin-right: 10%; */
+}
+
+.foot-right{
+  width: 350px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menu-1{
+  margin-right: 20%;
+}
+
+.copy-light{
+  margin-top: 5%;
+}
+.copy-light p{
+  font-size: 12px;
+  color: #ab8c52;
+}
+
+
+/* さかい果樹園について */
+
+.kasou-box{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 5%; */
+  background-color: #FFF2A1;
+}
+
+.kasou-title{
+  position: relative;
+  padding-bottom: 28px;
+  letter-spacing: 0.1em;
+}
+
+.kasou-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 8px;
+
+  background:
+    radial-gradient(circle at 4px 4px, #F25959 4px, transparent 5px) repeat-x;
+  background-size: 16px 8px;
+  opacity: 0.6;
+}
+
+.kirikae2{
+  background-color: #FFF2A1;
+  margin-bottom: 5%;
+}
+
+.main-setumei2{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    margin-bottom: 15%;
+}
+
+.main-txt2{
+    width: 50%;
+    margin-top: 5%;
+    line-height: 40px;
+}
+
+.main-img2{
+    width: 50%;
+    margin-right: 10%;
+    margin-top: 5%;
+
+}
+
+.main-img2 img{
+  width: 500px;
+}
+
+.farm-title{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-setumei{
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.about-txt{
+  line-height: 40px;
+}
+
+.news {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 60px 20px; */
+}
+
+
+.oshirase-box-4{
+    width: 1200px;
+    padding: 3% 0;
+    background-color: #FFFEF6;
+    border: 1px solid #FFF2A1;
+    margin-bottom: 5px;
+    border-radius: 30px 30px 0 0;
+}
+.oshirase-txt{
+    display: flex;
+    margin-left: 8%;
+}
+.koushinbi{
+    margin-right: 15%;
+}
+
+.oshirase-box-5{
+    width: 1200px;
+    padding: 3% 0;
+    background-color: #FFFEF6;
+    border: 1px solid #FFF2A1;
+    margin-bottom: 5px;
+}
+.oshirase-box-6{
+    width: 1200px;
+    padding: 3% 0;
+    background-color: #FFFEF6;
+    border: 1px solid #FFF2A1;    
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 10%;
+}
+
+
+/* お問い合わせ */
+
+/* ===== 共通 ===== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFFAD8;
+  color: #91743E;
+  line-height: 1.7;
+}
+
+/* ===== コンテナ ===== */
+.contact-wrap {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 16px;
+  /* box-shadow: 0 10px 30px rgba(145,116,62,.15); */
+}
+
+.page-title {
+  font-size: 30px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #91743E;
+  letter-spacing: 0.12em;
+}
+
+.contact-wrap p {
+  font-size: 15px;
+  margin-bottom: 32px;
+  color: rgba(145,116,62,0.85);
+}
+
+/* ===== フォーム ===== */
+.contact-form {
+  padding: 10px 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.label {
+  width: 180px;
+  font-size: 14px;
+  padding-top: 10px;
+  font-weight: 600;
+  color: #91743E;
+}
+
+.control {
+  flex: 1;
+}
+
+/* ===== 入力 ===== */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 2px solid rgba(145,116,62,0.35);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #F25959;
+  /* box-shadow: 0 0 0 4px rgba(242,89,89,.15); */
+}
+
+textarea {
+  min-height: 160px;
+}
+
+/* ===== 必須 ===== */
+.required {
+  color: #F25959;
+  margin-left: 6px;
+  font-weight: bold;
+}
+
+/* ===== 同意 ===== */
+.agree {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0;
+  font-size: 14px;
+  color: #91743E;
+}
+
+.agree input {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== 送信ボタン ===== */
+.btn-submit {
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #F25959;
+    background-color: #F25959;
+    border-radius: 80px;
+    padding: 15px 30px;
+    font-family: "Kaisei Opti", serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-submit:hover{
+    border: 2px solid #FFBCAB;
+    background-color: #FFF;
+    color: #FFBCAB;
+    transition: all .2s;
+    transform: scale(1.1,1.1);
+}
+.btn-submit:active{
+    text-decoration: none; color: #FFBCAB;
+}
+
+
+/* ===== スマホ ===== */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .label {
+    width: 100%;
+    padding-top: 0;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+}
+
+
+/* プライバシーポリシー */
+
+.o-policy-oya{
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+.o-policy-02{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+.o-policy-maintxt{
+  margin-bottom: 2rem;
+}
+.o-policy-04{
+  margin-bottom: 2rem;
+}
+.o-policy-05{
+  margin-bottom: 2rem;
+}
+.o-policy-06{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+}
+.o-policy-07{
+  margin-bottom: 2rem;
+}
+.o-policy-08{
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 768px) {
+  .o-midasi-policy{
+    margin-bottom: 15rem;
+  }
+  .o-policy-oya{
+    margin-bottom: 15rem;
+  }
+}
+
+/* おしらせ詳細 */
+
+.news-detail {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px 50px;
+  color: #91743E;
+  position: relative;
+
+  background-color: #FFFEF6;
+  border: 1px solid #FFF2A1; 
+  border-radius: 30px;
+}
+
+.news-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.news-category {
+  color: #91743E;
+  font-weight: bold;
+  border: 1px solid #91743E;
+  padding: 3px 10px;
+  border-radius: 30px;
+  font-size: 13px;
+
+}
+
+.news-date {
+  color: #91743E;
+  font-size: 13px;
+
+}
+
+/* 右上りんご */
+.apple-icon {
+  width: 40px;
+  height: auto;
+  margin-left: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  right: 30px;
+  bottom: 60px;      
+}
+
+/* ホバーでぷるぷる揺れる */
+.apple-icon:hover {
+  animation: shake 0.4s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(6deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.news-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #91743E;
+  margin-bottom: 30px;
+}
+
+.news-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.news-back {
+  display: inline-block;
+  margin-top: 40px;
+  color: #91743E;
+  font-weight: bold;
+  border-bottom: 1px solid #91743E;
+  text-decoration: none;
+  transition: 0.2s;
+  font-size: 13px;
+}
+
+.news-back:hover {
+  color: #D7BC8A;
+  border-bottom-color: #D7BC8A;
+}
+
+
+/* りんご狩りについて */
+
+.ringo-title{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    margin-bottom: 3%;
+}
+
+.apple-txt{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 40px;
+}
+
+.apple-setumei{
+  margin-bottom: 5%;
+}
+
+.apple-syousai{
+  max-width: 1200px;
+  height: fit-content;
+  background-color: #FFFEF6;
+  border: 1px solid #FFF2A1; 
+  border-radius: 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 50px;
+  margin-bottom: 5%;
+}
+
+.apple-syousai-title h2{
+  margin-bottom: 50px;
+}
+
+.apple-syousai-txt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 40px;
+
+}
+.apple-syousai-txt h3{
+  margin-bottom: 5%;
+}
+
+.open-time{
+  margin-bottom: 5%;
+}
+
+.take-out{
+  margin-bottom: 5%;
+}
+
+.txt-end{
+  margin-bottom: 8%;
+}
+
+.takeout-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-right{
+  margin-right: 15%;
+}
+
