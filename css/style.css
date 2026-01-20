@@ -57,6 +57,9 @@ body a:visited{text-decoration: none; color: #665447;}
 body a:hover{text-decoration: none; color: #ffc107;}
 body a:active{text-decoration: none; color: #ffc107;}
 
+p{
+  font-size: 16px;
+}
 h1{
   font-size: 30px;
 }
@@ -65,6 +68,16 @@ h2{
 }
 ul {
   list-style: circle inside;
+}
+
+/* モバイルレイアウト : 400 px 以下 */
+@media only screen and (max-width: 400px) {
+  h1{
+    font-size: 26px;
+  }
+  h2{
+    font-size: 21px;
+  }
 }
 
 /* .section {
@@ -772,6 +785,28 @@ footer{
   }
 }
 
+/* モバイルレイアウト : 400 px 以下 */
+@media only screen and (max-width: 400px) {
+  .mv-txt{
+    font-size: 12px;
+  }
+  .apple-title{
+    font-size: 18px;
+  }
+  .wagashi-title{
+    font-size: 18px;
+  }
+  .ring-title{
+    font-size: 18px;
+  }
+  .idol-title{
+    font-size: 18px;
+  }
+  .miso-title{
+    font-size: 18px;
+  }
+}
+
 
 /* ----------------
 
@@ -1346,3 +1381,14 @@ footer{
   }
 }
 
+/* モバイルレイアウト : 400 px 以下 */
+@media only screen and (max-width: 400px) {
+  .prof-txtbox{
+    width: 80%;
+  }
+  .me-setumei{
+    width: 330px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+}
