@@ -785,7 +785,7 @@ footer{
 /* モバイルレイアウト : 400 px 以下 */
 @media only screen and (max-width: 400px) {
   .mv-txt{
-    font-size: 12px;
+    font-size: 10px;
   }
   .portfolio-size{
     width: 200px;
